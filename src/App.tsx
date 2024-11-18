@@ -6,18 +6,19 @@ import {
   Burger,
   Group,
   MantineProvider,
-  Text,
+  Image,
 } from "@mantine/core";
 import { Link, Outlet } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";
 import LinkGroup from "./Components/LinkGroup";
+import Logo from "./assets/logo-preview.png";
 
 function App() {
   const [opened, { toggle }] = useDisclosure();
   return (
     <MantineProvider>
       <AppShell
-        header={{ height: 100 }}
+        header={{ height: 150 }}
         navbar={{
           width: 300,
           breakpoint: "sm",
@@ -26,24 +27,26 @@ function App() {
       >
         <AppShell.Header>
           <Group h="100%" justify="space-around">
-            <Group h="100%" justify="space-around" visibleFrom="sm">
-              <LinkGroup burger={true}/>
+            <Group h="100%" justify="flex-start" visibleFrom="sm" w={"70%"}>
+              <LinkGroup burger={true} />
             </Group>
             <Box hiddenFrom="sm">
-              <Text>Logo</Text>
+              <Link to={"/"}>
+                <Image src={Logo} h={140}></Image>
+              </Link>
             </Box>
             <Burger
               opened={opened}
               onClick={toggle}
               hiddenFrom="sm"
-              size="sm"
+              size="lg"
             />
           </Group>
         </AppShell.Header>
         <AppShell.Navbar>
-          <LinkGroup burger={false}/>
+          <LinkGroup burger={false} />
         </AppShell.Navbar>
-        <AppShell.Main>
+        <AppShell.Main w={"100dvw"}>
           <Outlet />
         </AppShell.Main>
       </AppShell>

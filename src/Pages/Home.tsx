@@ -1,11 +1,25 @@
-import React from 'react'
+import { BackgroundImage, Container, Stack, Text, Title } from "@mantine/core";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const Home = (props: Props) => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <Container fluid h={700} p={0}>
+        <BackgroundImage
+          src="https://blog.tryfi.com/content/images/2024/03/happy-dog-yellow-flowers.webp"
+          h={700}
+        >
+          <Stack justify="center" align="center" h={'50%'}>
+            <Title order={1}>Psie Liceum</Title>
+            <Title order={2}>Weronika Roszkowska</Title>
+            <Text size="lg">Psie Liceum to miejsce w którym twój pies nauczy się posłuszeństwa oraz dobrych manier</Text>
+          </Stack>
+        </BackgroundImage>
+      </Container>
+    </>
+  );
+};
 
-export default Home
+export default Home;
