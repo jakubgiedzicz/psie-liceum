@@ -7,18 +7,22 @@ import {
   Group,
   MantineProvider,
   Image,
+  Center,
+  Container,
+  Flex,
 } from "@mantine/core";
 import { Link, Outlet } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";
 import LinkGroup from "./Components/LinkGroup";
 import Logo from "./assets/logo-preview.png";
+import "@mantine/core/styles.css";
 
 function App() {
   const [opened, { toggle }] = useDisclosure();
   return (
     <MantineProvider>
       <AppShell
-        header={{ height: 150 }}
+        header={{ height: 200 }}
         navbar={{
           width: 300,
           breakpoint: "sm",
@@ -26,22 +30,39 @@ function App() {
         }}
       >
         <AppShell.Header>
-          <Group h="100%" justify="space-around">
-            <Group h="100%" justify="flex-start" visibleFrom="sm" w={"70%"}>
-              <LinkGroup burger={true} />
-            </Group>
-            <Box hiddenFrom="sm">
+          {/* <Container>
+            <Box w={175}>
               <Link to={"/"}>
-                <Image src={Logo} h={140}></Image>
+                <Image src={Logo}/>
               </Link>
             </Box>
-            <Burger
-              opened={opened}
-              onClick={toggle}
-              hiddenFrom="sm"
-              size="lg"
-            />
-          </Group>
+            <Group justify="space-around">
+              <LinkGroup burger={true} />
+              <Burger
+                opened={opened}
+                onClick={toggle}
+                hiddenFrom="sm"
+                size="lg"
+              />
+            </Group>
+          </Container> */}
+          <Center className="center_space">
+            <Flex h={200} align={'center'} ml={64}>
+            <Link to={"/"}>
+                <Image src={Logo} w={175}/>
+              </Link>
+            </Flex>
+            {/* test */}
+            <Group wrap={'wrap'} ml={32} justify="center">
+              <LinkGroup burger={true}/>
+              <Burger
+                opened={opened}
+                onClick={toggle}
+                hiddenFrom="sm"
+                size="lg"
+              />
+            </Group>
+          </Center>
         </AppShell.Header>
         <AppShell.Navbar>
           <LinkGroup burger={false} />

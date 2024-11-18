@@ -8,10 +8,10 @@ import {
   MenuDropdown,
   Collapse,
   Container,
+  Divider,
 } from "@mantine/core";
 import Logo from "../assets/logo-preview.png";
 import LogoIg from "../assets/Instagram_Glyph_Gradient.svg";
-import { useEffect } from "react";
 import styles from "./LinkGroup.module.css";
 import { useDisclosure } from "@mantine/hooks";
 
@@ -23,23 +23,21 @@ const LinkGroup = (props: Props) => {
   let location = useLocation();
   const theme = useMantineTheme();
   const [opened, { toggle }] = useDisclosure(false);
-  const isBurgerLogo = (burger: boolean) => {
-    if (burger) {
-      return (
-        <Link to={"/"}>
-          <Image src={Logo} h={140} />
-        </Link>
-      );
-    }
-  };
+  // const isBurgerLogo = (burger: boolean) => {
+  //   if (burger) {
+  //     return (
+        
+  //     );
+  //   }
+  // };
   const isBurgerIg = (burger: boolean) => {
     if (burger) {
       return (
-        <Container size={64}>
+        <Box w={32} ml={32}>
           <a href="https://www.instagram.com/jakub.giedzicz/">
             <Image src={LogoIg} />
           </a>
-        </Container>
+        </Box>
       );
     }
   };
@@ -55,6 +53,7 @@ const LinkGroup = (props: Props) => {
                   location.pathname === "/oferta" ? "red" : theme.colors.gray[8]
                 }
                 className={styles.hover_text}
+                size="xl"
               >
                 Usługi
               </Text>
@@ -73,43 +72,113 @@ const LinkGroup = (props: Props) => {
           <Text
             onClick={toggle}
             fw={700}
-            className={styles.hover_text}
+            className={
+              styles.hover_text +
+              " " +
+              styles.oferta +
+              " " +
+              styles.burger_element
+            }
             c={location.pathname === "/oferta" ? "red" : theme.colors.gray[8]}
+            size="xl"
           >
             Oferta
           </Text>
-          <Collapse in={opened}>
-            <Text>Konsultacje</Text>
-            <Text>Szkolenia indywidualne</Text>
-            <Text>Szkolenia grupowe</Text>
+          <Collapse in={opened} bg="rgb(245, 245, 245)">
+            <Divider />
+            <Box className={styles.subcollapse}>
+              <Text mt={4} size="lg">
+                Konsultacje
+              </Text>
+            </Box>
+            <Box className={styles.subcollapse}>
+              <Text mt={4} size="lg">
+                Szkolenia indywidualne
+              </Text>
+            </Box>
+            <Box className={styles.subcollapse}>
+              <Text mt={4} mb={16} size="lg">
+                Szkolenia grupowe
+              </Text>
+            </Box>
+            <Divider />
           </Collapse>
         </>
       );
     }
   };
-  useEffect(() => {
-    console.log(location);
-  }, []);
   return (
     <>
-      {isBurgerLogo(props.burger)}
+      {/* {isBurgerLogo(props.burger)} */}
       <Box pl={props.burger ? 40 : 0}>
         <Link to={"o-mnie"}>
           <Text
             fw={700}
             c={location.pathname === "/o-mnie" ? "red" : theme.colors.gray[8]}
-            className={styles.hover_text}
+            className={
+              props.burger
+                ? styles.hover_text
+                : styles.hover_text + " " + styles.burger_element
+            }
+            size="xl"
           >
             O mnie
           </Text>
         </Link>
       </Box>
-      {isBurgerMenu(props.burger)}
+      {/*isBurgerMenu(props.burger)*/}
       <Link to={"kontakt"}>
         <Text
           fw={700}
           c={location.pathname === "/kontakt" ? "red" : theme.colors.gray[8]}
-          className={styles.hover_text}
+          className={
+            props.burger
+              ? styles.hover_text
+              : styles.hover_text + " " + styles.burger_element
+          }
+          size="xl"
+        >
+          Konsultacje indywidualne
+        </Text>
+      </Link>
+      <Link to={"kontakt"}>
+        <Text
+          fw={700}
+          c={location.pathname === "/kontakt" ? "red" : theme.colors.gray[8]}
+          className={
+            props.burger
+              ? styles.hover_text
+              : styles.hover_text + " " + styles.burger_element
+          }
+          size="xl"
+        >
+          Zajęcia grupowe
+        </Text>
+      </Link>
+      <Link to={"kontakt"}>
+        <Text
+          fw={700}
+          c={location.pathname === "/kontakt" ? "red" : theme.colors.gray[8]}
+          className={
+            props.burger
+              ? styles.hover_text
+              : styles.hover_text + " " + styles.burger_element
+          }
+          size="xl"
+        >
+          Cennik
+        </Text>
+      </Link>
+      <Link to={"kontakt"}>
+        <Text
+          fw={700}
+          c={location.pathname === "/kontakt" ? "red" : theme.colors.gray[8]}
+          className={
+            props.burger
+              ? styles.hover_text
+              : styles.hover_text + " " + styles.burger_element
+          }
+          size="xl"
         >
           Kontakt
         </Text>
@@ -118,7 +187,12 @@ const LinkGroup = (props: Props) => {
         <Text
           fw={700}
           c={location.pathname === "/blog" ? "red" : theme.colors.gray[8]}
-          className={styles.hover_text}
+          className={
+            props.burger
+              ? styles.hover_text
+              : styles.hover_text + " " + styles.burger_element
+          }
+          size="xl"
         >
           Blog
         </Text>
@@ -129,3 +203,4 @@ const LinkGroup = (props: Props) => {
 };
 
 export default LinkGroup;
+//konsultacje indy, zajecia grupowe > psieprzedszkole - psiapodstawowka, cennik, kontakt, blog

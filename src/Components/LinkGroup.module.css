@@ -1,3 +1,16 @@
+.subcollapse:Hover {
+  background-color: rgb(235, 235, 235);
+  cursor: pointer;
+}
+.logo_container {
+  height: 200px;
+}
+.burger_element {
+  margin-top: 1em;
+}
+.oferta:hover {
+  cursor: pointer;
+}
 .hover_text:hover {
   color: rgb(220, 169, 0)!important;
 }
