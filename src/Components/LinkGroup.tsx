@@ -1,14 +1,23 @@
 import { Link } from "react-router-dom";
-import { Text } from '@mantine/core'
+import { Box, Group, Text } from "@mantine/core";
 
-type Props = {};
+type Props = {
+  burger: boolean;
+};
 
 const LinkGroup = (props: Props) => {
+  const isBurger = (burger: boolean) => {
+    if (burger) {
+      return (
+        <Link to={"/"}>
+          <Text>Logo</Text>
+        </Link>
+      );
+    }
+  };
   return (
     <>
-      <Link to={"/"}>
-        <Text>Logo</Text>
-      </Link>
+    {isBurger(props.burger)}
       <Link to={"o-mnie"}>
         <Text>O mnie</Text>
       </Link>

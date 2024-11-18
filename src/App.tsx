@@ -1,6 +1,13 @@
 import "@mantine/core/styles.css";
 import "./App.css";
-import { AppShell, Box, Burger, Group, MantineProvider, Text } from "@mantine/core";
+import {
+  AppShell,
+  Box,
+  Burger,
+  Group,
+  MantineProvider,
+  Text,
+} from "@mantine/core";
 import { Link, Outlet } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";
 import LinkGroup from "./Components/LinkGroup";
@@ -9,15 +16,32 @@ function App() {
   const [opened, { toggle }] = useDisclosure();
   return (
     <MantineProvider>
-      <AppShell header={{ height: 100 }} navbar={{width: 300, breakpoint: 'sm', collapsed:{ mobile: !opened, desktop: true }}}>
-        <AppShell.Header >
-          <Group h='100%' justify="space-around" visibleFrom="sm">
-            <LinkGroup />
+      <AppShell
+        header={{ height: 100 }}
+        navbar={{
+          width: 300,
+          breakpoint: "sm",
+          collapsed: { mobile: !opened, desktop: true },
+        }}
+      >
+        <AppShell.Header>
+          <Group h="100%" justify="space-around">
+            <Group h="100%" justify="space-around" visibleFrom="sm">
+              <LinkGroup burger={true}/>
             </Group>
-          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+            <Box hiddenFrom="sm">
+              <Text>Logo</Text>
+            </Box>
+            <Burger
+              opened={opened}
+              onClick={toggle}
+              hiddenFrom="sm"
+              size="sm"
+            />
+          </Group>
         </AppShell.Header>
         <AppShell.Navbar>
-        <LinkGroup />
+          <LinkGroup burger={false}/>
         </AppShell.Navbar>
         <AppShell.Main>
           <Outlet />
