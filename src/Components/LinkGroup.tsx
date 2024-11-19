@@ -7,10 +7,8 @@ import {
   Menu,
   MenuDropdown,
   Collapse,
-  Container,
   Divider,
 } from "@mantine/core";
-import Logo from "../assets/logo-preview.png";
 import LogoIg from "../assets/Instagram_Glyph_Gradient.svg";
 import styles from "./LinkGroup.module.css";
 import { useDisclosure } from "@mantine/hooks";
