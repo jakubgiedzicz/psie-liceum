@@ -3,3 +3,12 @@
   -moz-box-shadow: 8px 8px 8px -9px rgba(66, 68, 90, 1);
   box-shadow: 8px 8px 8px -9px rgba(66, 68, 90, 1);
 }
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

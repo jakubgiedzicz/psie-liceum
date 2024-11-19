@@ -3,6 +3,7 @@ import {
   Box,
   Center,
   Container,
+  Divider,
   Grid,
   Image,
   List,
@@ -63,7 +64,8 @@ const Home = () => {
           </Stack>
         </Box>
       </SimpleGrid>
-      <Stack>
+      <Divider mt={64} size={'sm'}/>
+      <Stack mt={64}>
         <Title order={1}>W czym mogę pomóc</Title>
         <Text>
           Gwarantuję Ci humanitarne metody szkolenia psów, które zadowolą psy
@@ -73,6 +75,7 @@ const Home = () => {
           gutter={{ base: 5, xs: 50, md: 50, xl: 80 }}
           pl={96}
           pr={96}
+          mt={32}
         >
           <Grid.Col span={{ base: 12, sm: 6, lg: 3 }} className={styles.box_shadow}>
             <Stack>
@@ -152,6 +155,11 @@ const Home = () => {
           </Grid.Col>
         </Grid>
       </Stack>
+      <Center>
+        <BackgroundImage src={img_about} mih={400} className={styles.parallax} mt={128}>
+        <Title order={1}>Umów spotkanie</Title>
+        </BackgroundImage>
+      </Center>
     </>
   );
 };
