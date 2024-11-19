@@ -52,16 +52,15 @@ function App() {
                 <Image src={Logo} w={175}/>
               </Link>
             </Flex>
-            {/* test */}
-            <Group wrap={'wrap'} ml={32} justify="center">
+            <Group wrap={'wrap'} ml={32} justify="center" visibleFrom="sm">
               <LinkGroup burger={true}/>
-              <Burger
+            </Group>
+            <Burger
                 opened={opened}
                 onClick={toggle}
                 hiddenFrom="sm"
                 size="lg"
               />
-            </Group>
           </Center>
         </AppShell.Header>
         <AppShell.Navbar>

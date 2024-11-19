@@ -23,13 +23,6 @@ const LinkGroup = (props: Props) => {
   let location = useLocation();
   const theme = useMantineTheme();
   const [opened, { toggle }] = useDisclosure(false);
-  // const isBurgerLogo = (burger: boolean) => {
-  //   if (burger) {
-  //     return (
-        
-  //     );
-  //   }
-  // };
   const isBurgerIg = (burger: boolean) => {
     if (burger) {
       return (
@@ -55,14 +48,13 @@ const LinkGroup = (props: Props) => {
                 className={styles.hover_text}
                 size="xl"
               >
-                Usługi
+                Zajęcia grupowe
               </Text>
             </Link>
           </Menu.Target>
           <MenuDropdown>
-            <Menu.Item>Konsultacje</Menu.Item>
-            <Menu.Item>Szkolenia indywidualne</Menu.Item>
-            <Menu.Item>Szkolenia grupowe</Menu.Item>
+            <Menu.Item>Psieprzedszkole</Menu.Item>
+            <Menu.Item>Psiapodstawówka</Menu.Item>
           </MenuDropdown>
         </Menu>
       );
@@ -82,23 +74,18 @@ const LinkGroup = (props: Props) => {
             c={location.pathname === "/oferta" ? "red" : theme.colors.gray[8]}
             size="xl"
           >
-            Oferta
+            Zajęcia grupowe
           </Text>
           <Collapse in={opened} bg="rgb(245, 245, 245)">
             <Divider />
             <Box className={styles.subcollapse}>
               <Text mt={4} size="lg">
-                Konsultacje
+                Psieprzedszkole
               </Text>
             </Box>
             <Box className={styles.subcollapse}>
               <Text mt={4} size="lg">
-                Szkolenia indywidualne
-              </Text>
-            </Box>
-            <Box className={styles.subcollapse}>
-              <Text mt={4} mb={16} size="lg">
-                Szkolenia grupowe
+                Psiapodstawówka
               </Text>
             </Box>
             <Divider />
@@ -109,7 +96,6 @@ const LinkGroup = (props: Props) => {
   };
   return (
     <>
-      {/* {isBurgerLogo(props.burger)} */}
       <Box pl={props.burger ? 40 : 0}>
         <Link to={"o-mnie"}>
           <Text
@@ -126,7 +112,6 @@ const LinkGroup = (props: Props) => {
           </Text>
         </Link>
       </Box>
-      {/*isBurgerMenu(props.burger)*/}
       <Link to={"kontakt"}>
         <Text
           fw={700}
@@ -141,20 +126,7 @@ const LinkGroup = (props: Props) => {
           Konsultacje indywidualne
         </Text>
       </Link>
-      <Link to={"kontakt"}>
-        <Text
-          fw={700}
-          c={location.pathname === "/kontakt" ? "red" : theme.colors.gray[8]}
-          className={
-            props.burger
-              ? styles.hover_text
-              : styles.hover_text + " " + styles.burger_element
-          }
-          size="xl"
-        >
-          Zajęcia grupowe
-        </Text>
-      </Link>
+      {isBurgerMenu(props.burger)}
       <Link to={"kontakt"}>
         <Text
           fw={700}
