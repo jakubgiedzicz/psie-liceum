@@ -20,15 +20,13 @@
   text-shadow: 1px 1px 2px black;
 }
 .paragraph {
-  text-shadow: 1px 1px 16px white;
+  color: white;
+  text-shadow: 1px 1px 2px black;
 }
 .intro_text {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .end_bg {
-  background-color: var(--main-theme-color);
-  padding: 1rem;
-  border-radius: 30%;
   cursor: pointer;
 }
 .heading_shadow {

@@ -47,7 +47,7 @@ function App() {
               opened={opened}
               onClick={toggle}
               hiddenFrom="sm"
-              size="lg"
+              size="xl"
             />
           </Center>
         </AppShell.Header>

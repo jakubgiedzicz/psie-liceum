@@ -38,7 +38,7 @@ const Home = () => {
             >
               <Title
                 order={2}
-                className={styles.title2 + " " + styles.intro_text}
+                className={styles.title2 + " " + styles.intro_text+ " " + styles.paragraph}
               >
                 Weronika Roszkowska
               </Title>
@@ -75,7 +75,7 @@ const Home = () => {
         <Box>
           <Stack>
             <Title order={1} c={theme.colors.yellow[6]} className={styles.heading_shadow}>Lorem Ipsum</Title>
-            <p>
+            <Text mt={16} fw={500}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
               itaque dolore placeat temporibus! Facere deleniti soluta vitae
               dolore, voluptatibus reprehenderit repellendus sint vel sed
@@ -83,7 +83,7 @@ const Home = () => {
               similique officia ducimus reiciendis perferendis tenetur
               voluptates ut? Nam illo molestiae porro, voluptatem mollitia quam
               beatae odio quisquam.
-            </p>
+            </Text>
           </Stack>
         </Box>
       </SimpleGrid>
@@ -197,7 +197,7 @@ const Home = () => {
         mt={128}
       >
         <Stack w={"100%"} mih={400} justify="center" align="center">
-          <Title order={1} className={styles.intro_text + " " + styles.end_bg}>
+          <Title order={1} className={styles.intro_text + " " + styles.heading_shadow + ' ' + styles.title2 + ' ' + styles.end_bg} c={theme.colors.yellow[4]}>
             Umów spotkanie
           </Title>
         </Stack>
