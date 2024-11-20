@@ -4,18 +4,22 @@ import {
   Center,
   Container,
   Divider,
+  Flex,
   Grid,
+  Group,
   Image,
   List,
   SimpleGrid,
   Stack,
   Text,
   Title,
+  useMantineTheme,
 } from "@mantine/core";
 import img_about from "../assets/home-about-me.jpg";
-import styles from './Home.module.css'
+import styles from "./Home.module.css";
 
 const Home = () => {
+  const theme = useMantineTheme();
   return (
     <>
       <Container fluid p={0}>
@@ -23,19 +27,38 @@ const Home = () => {
           src="https://blog.tryfi.com/content/images/2024/03/happy-dog-yellow-flowers.webp"
           h={700}
         >
-          <Stack
-            justify="center"
-            align="center"
-            h={"30%"}
-            bg={"rgba(15, 15, 15, 0.15)"}
-          >
-            <Title order={1}>Psie Liceum</Title>
-            <Title order={2}>Weronika Roszkowska</Title>
-            <Text size="lg">
-              Psie Liceum to miejsce w którym twój pies nauczy się posłuszeństwa
-              oraz dobrych manier
-            </Text>
-          </Stack>
+          <Box w={"100%"} h={"100%"} bg={"rgba(255, 255, 255, 0.1)"}>
+            <Stack
+              w={"50%"}
+              pl={48}
+              gap={96}
+              pr={48}
+              h={"100%"}
+              justify="center"
+            >
+              <Title
+                order={2}
+                className={styles.title2 + " " + styles.intro_text}
+              >
+                Weronika Roszkowska
+              </Title>
+              <Title
+                order={1}
+                className={styles.title + " " + styles.intro_text}
+                c={theme.colors.yellow[6]}
+              >
+                Psie Liceum
+              </Title>
+              <Text
+                size="xl"
+                className={styles.intro_text + " " + styles.paragraph}
+              >
+                Witam Cię serdecznie na mojej stronie. Mam na imię Weronika,
+                jestem psią behawiorystką, czyli specjalistką od zachowania
+                psów.
+              </Text>
+            </Stack>
+          </Box>
         </BackgroundImage>
       </Container>
       <SimpleGrid
@@ -51,7 +74,7 @@ const Home = () => {
         </Box>
         <Box>
           <Stack>
-            <Title order={1}>Lorem Ipsum</Title>
+            <Title order={1} c={theme.colors.yellow[6]} className={styles.heading_shadow}>Lorem Ipsum</Title>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
               itaque dolore placeat temporibus! Facere deleniti soluta vitae
@@ -64,9 +87,9 @@ const Home = () => {
           </Stack>
         </Box>
       </SimpleGrid>
-      <Divider mt={64} size={'sm'}/>
+      <Divider mt={64} size={"sm"} />
       <Stack mt={64}>
-        <Title order={1}>W czym mogę pomóc</Title>
+        <Title order={1} c={theme.colors.yellow[6]} className={styles.heading_shadow}>W czym mogę pomóc</Title>
         <Text>
           Gwarantuję Ci humanitarne metody szkolenia psów, które zadowolą psy
           jak i właścicieli!
@@ -77,10 +100,13 @@ const Home = () => {
           pr={96}
           mt={32}
         >
-          <Grid.Col span={{ base: 12, sm: 6, lg: 3 }} className={styles.box_shadow}>
+          <Grid.Col
+            span={{ base: 12, sm: 6, lg: 3 }}
+            className={styles.box_shadow}
+          >
             <Stack>
-              <Text>Konsultacje indywidualne</Text>
-              <List ta={'left'}>
+              <Text fw={600}>Konsultacje indywidualne</Text>
+              <List ta={"left"}>
                 <List.Item>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit
                 </List.Item>
@@ -96,10 +122,13 @@ const Home = () => {
               </List>
             </Stack>
           </Grid.Col>
-          <Grid.Col span={{ base: 12, sm: 6, lg: 3 }} className={styles.box_shadow}>
-          <Stack>
-              <Text>Zajecia grupowe</Text>
-              <List ta={'left'}>
+          <Grid.Col
+            span={{ base: 12, sm: 6, lg: 3 }}
+            className={styles.box_shadow}
+          >
+            <Stack>
+              <Text fw={600}>Zajecia grupowe</Text>
+              <List ta={"left"}>
                 <List.Item>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit
                 </List.Item>
@@ -115,10 +144,13 @@ const Home = () => {
               </List>
             </Stack>
           </Grid.Col>
-          <Grid.Col span={{ base: 12, sm: 6, lg: 3 }} className={styles.box_shadow}>
-          <Stack>
-              <Text>Psieprzedszkole</Text>
-              <List ta={'left'}>
+          <Grid.Col
+            span={{ base: 12, sm: 6, lg: 3 }}
+            className={styles.box_shadow}
+          >
+            <Stack>
+              <Text fw={600}>Psieprzedszkole</Text>
+              <List ta={"left"}>
                 <List.Item>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit
                 </List.Item>
@@ -134,10 +166,13 @@ const Home = () => {
               </List>
             </Stack>
           </Grid.Col>
-          <Grid.Col span={{ base: 12, sm: 6, lg: 3 }} className={styles.box_shadow}>
-          <Stack>
-              <Text>Psiapodstawowka</Text>
-              <List ta={'left'}>
+          <Grid.Col
+            span={{ base: 12, sm: 6, lg: 3 }}
+            className={styles.box_shadow}
+          >
+            <Stack>
+              <Text fw={600}>Psiapodstawówka</Text>
+              <List ta={"left"}>
                 <List.Item>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit
                 </List.Item>
@@ -155,11 +190,18 @@ const Home = () => {
           </Grid.Col>
         </Grid>
       </Stack>
-      <Center>
-        <BackgroundImage src={img_about} mih={400} className={styles.parallax} mt={128}>
-        <Title order={1}>Umów spotkanie</Title>
-        </BackgroundImage>
-      </Center>
+      <BackgroundImage
+        src={img_about}
+        mih={400}
+        className={styles.parallax}
+        mt={128}
+      >
+        <Stack w={"100%"} mih={400} justify="center" align="center">
+          <Title order={1} className={styles.intro_text + " " + styles.end_bg}>
+            Umów spotkanie
+          </Title>
+        </Stack>
+      </BackgroundImage>
     </>
   );
 };

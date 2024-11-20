@@ -41,7 +41,7 @@ const LinkGroup = (props: Props) => {
               <Text
                 fw={700}
                 c={
-                  location.pathname === "/oferta" ? "red" : theme.colors.gray[8]
+                  location.pathname === "/oferta" ? theme.colors.cyan[4] : theme.colors.gray[9]
                 }
                 className={styles.hover_text}
                 size="xl"
@@ -69,7 +69,7 @@ const LinkGroup = (props: Props) => {
               " " +
               styles.burger_element
             }
-            c={location.pathname === "/oferta" ? "red" : theme.colors.gray[8]}
+            c={location.pathname === "/oferta" ? theme.colors.cyan[4] : theme.colors.gray[9]}
             size="xl"
           >
             Zajęcia grupowe
@@ -98,7 +98,7 @@ const LinkGroup = (props: Props) => {
         <Link to={"o-mnie"}>
           <Text
             fw={700}
-            c={location.pathname === "/o-mnie" ? "red" : theme.colors.gray[8]}
+            c={location.pathname === "/o-mnie" ? theme.colors.cyan[4] : theme.colors.gray[9]}
             className={
               props.burger
                 ? styles.hover_text
@@ -113,7 +113,7 @@ const LinkGroup = (props: Props) => {
       <Link to={"kontakt"}>
         <Text
           fw={700}
-          c={location.pathname === "/kontakt" ? "red" : theme.colors.gray[8]}
+          c={location.pathname === "/kontakt" ? theme.colors.cyan[4] : theme.colors.gray[9]}
           className={
             props.burger
               ? styles.hover_text
@@ -128,7 +128,7 @@ const LinkGroup = (props: Props) => {
       <Link to={"kontakt"}>
         <Text
           fw={700}
-          c={location.pathname === "/kontakt" ? "red" : theme.colors.gray[8]}
+          c={location.pathname === "/kontakt" ? theme.colors.cyan[4] : theme.colors.gray[9]}
           className={
             props.burger
               ? styles.hover_text
@@ -142,7 +142,7 @@ const LinkGroup = (props: Props) => {
       <Link to={"kontakt"}>
         <Text
           fw={700}
-          c={location.pathname === "/kontakt" ? "red" : theme.colors.gray[8]}
+          c={location.pathname === "/kontakt" ? theme.colors.cyan[4] : theme.colors.gray[9]}
           className={
             props.burger
               ? styles.hover_text
@@ -156,7 +156,7 @@ const LinkGroup = (props: Props) => {
       <Link to={"blog"}>
         <Text
           fw={700}
-          c={location.pathname === "/blog" ? "red" : theme.colors.gray[8]}
+          c={location.pathname === "/blog" ? theme.colors.cyan[4] : theme.colors.gray[9]}
           className={
             props.burger
               ? styles.hover_text
