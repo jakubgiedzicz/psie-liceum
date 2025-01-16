@@ -32,66 +32,6 @@ const LinkGroup = (props: Props) => {
       );
     }
   };
-  const isBurgerMenu = (burger: boolean) => {
-    if (burger) {
-      return (
-        <Menu trigger="hover" closeDelay={400}>
-          <Menu.Target>
-            <Link to={"oferta"}>
-              <Text
-                fw={700}
-                c={
-                  location.pathname === "/oferta" ? theme.colors.cyan[4] : theme.colors.gray[9]
-                }
-                className={styles.hover_text}
-                size="xl"
-              >
-                Zajęcia grupowe
-              </Text>
-            </Link>
-          </Menu.Target>
-          <MenuDropdown>
-            <Menu.Item>Psieprzedszkole</Menu.Item>
-            <Menu.Item>Psiapodstawówka</Menu.Item>
-          </MenuDropdown>
-        </Menu>
-      );
-    } else {
-      return (
-        <>
-          <Text
-            onClick={toggle}
-            fw={700}
-            className={
-              styles.hover_text +
-              " " +
-              styles.oferta +
-              " " +
-              styles.burger_element
-            }
-            c={location.pathname === "/oferta" ? theme.colors.cyan[4] : theme.colors.gray[9]}
-            size="xl"
-          >
-            Zajęcia grupowe
-          </Text>
-          <Collapse in={opened} bg="rgb(245, 245, 245)">
-            <Divider />
-            <Box className={styles.subcollapse}>
-              <Text mt={4} size="lg">
-                Psieprzedszkole
-              </Text>
-            </Box>
-            <Box className={styles.subcollapse}>
-              <Text mt={4} size="lg">
-                Psiapodstawówka
-              </Text>
-            </Box>
-            <Divider />
-          </Collapse>
-        </>
-      );
-    }
-  };
   return (
     <>
       <Box pl={props.burger ? 40 : 0}>
@@ -124,7 +64,20 @@ const LinkGroup = (props: Props) => {
           Konsultacje indywidualne
         </Text>
       </Link>
-      {isBurgerMenu(props.burger)}
+      <Link to={"konsultacje-dietetyczne"}>
+        <Text
+          fw={700}
+          c={location.pathname === "/konsultacje-dietetyczne" ? theme.colors.cyan[4] : theme.colors.gray[9]}
+          className={
+            props.burger
+              ? styles.hover_text
+              : styles.hover_text + " " + styles.burger_element
+          }
+          size="xl"
+        >
+          Konsultacje dietetyczne
+        </Text>
+      </Link>
       <Link to={"kontakt"}>
         <Text
           fw={700}

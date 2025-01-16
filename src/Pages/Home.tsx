@@ -52,6 +52,7 @@ const Home = () => {
               <Text
                 size="xl"
                 className={styles.intro_text + " " + styles.paragraph}
+                visibleFrom="sm"
               >
                 Witam Cię serdecznie na mojej stronie. Mam na imię Weronika,
                 jestem psią behawiorystką, czyli specjalistką od zachowania
@@ -101,7 +102,7 @@ const Home = () => {
           mt={32}
         >
           <Grid.Col
-            span={{ base: 12, sm: 6, lg: 3 }}
+            span={{ base: 12, sm: 4, lg: 4 }}
             className={styles.box_shadow}
           >
             <Stack>
@@ -123,7 +124,7 @@ const Home = () => {
             </Stack>
           </Grid.Col>
           <Grid.Col
-            span={{ base: 12, sm: 6, lg: 3 }}
+            span={{ base: 12, sm: 4, lg: 4 }}
             className={styles.box_shadow}
           >
             <Stack>
@@ -145,33 +146,11 @@ const Home = () => {
             </Stack>
           </Grid.Col>
           <Grid.Col
-            span={{ base: 12, sm: 6, lg: 3 }}
+            span={{ base: 12, sm: 4, lg: 4 }}
             className={styles.box_shadow}
           >
             <Stack>
-              <Text fw={600}>Psieprzedszkole</Text>
-              <List ta={"left"}>
-                <List.Item>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit
-                </List.Item>
-                <List.Item>Atque itaque dolore placeat temporibus!</List.Item>
-                <List.Item>
-                  Facere deleniti soluta vitae dolore, voluptatibus
-                  reprehenderit
-                </List.Item>
-                <List.Item>
-                  repellendus sint vel sed asperiores repudiandae accusamus
-                  alias
-                </List.Item>
-              </List>
-            </Stack>
-          </Grid.Col>
-          <Grid.Col
-            span={{ base: 12, sm: 6, lg: 3 }}
-            className={styles.box_shadow}
-          >
-            <Stack>
-              <Text fw={600}>Psiapodstawówka</Text>
+              <Text fw={600}>Konsultacje dietetyczne</Text>
               <List ta={"left"}>
                 <List.Item>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -197,7 +176,7 @@ const Home = () => {
         mt={128}
       >
         <Stack w={"100%"} mih={400} justify="center" align="center">
-          <Title order={1} className={styles.intro_text + " " + styles.heading_shadow + ' ' + styles.title2 + ' ' + styles.end_bg} c={theme.colors.yellow[4]}>
+          <Title order={1} className={styles.intro_text + " " + styles.heading_shadow + ' ' + styles.title2 + ' ' + styles.end_bg} c={theme.colors.yellow[6]}>
             Umów spotkanie
           </Title>
         </Stack>

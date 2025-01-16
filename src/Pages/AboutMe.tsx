@@ -1,11 +1,21 @@
-import React from 'react'
+import { Box, Center, Container, Group, Image, Stack, Title } from "@mantine/core";
+import about_me_img from "../assets/about_me_avatar.jpg";
 
-type Props = {}
-
-const AboutMe = (props: Props) => {
+const AboutMe = () => {
   return (
-    <div>AboutMe</div>
-  )
-}
+    <Container fluid p={0} bg={"red"}>
+      <Group justify="center">
+        <Stack>
+          <Title>
+            Weronika Roszkowska, 
+          </Title>
+        </Stack>
+        <Center>
+          <Image src={about_me_img} radius={"50% 50%"} />
+        </Center>
+      </Group>
+    </Container>
+  );
+};
 
-export default AboutMe
+export default AboutMe;

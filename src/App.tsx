@@ -20,6 +20,7 @@ import Logo from "./assets/logo-preview.png";
 import "@mantine/core/styles.css";
 import LogoIg from "./assets/Instagram_Glyph_Gradient.svg";
 import Footer from "./Components/Footer";
+import styles from './App.module.css'
 
 function App() {
   const [opened, { toggle }] = useDisclosure();
@@ -51,7 +52,7 @@ function App() {
             />
           </Center>
         </AppShell.Header>
-        <AppShell.Navbar>
+        <AppShell.Navbar pb={opened ? 48 : 0} className={opened ? styles.navbar_shadow : ''}>
           <LinkGroup burger={false} />
         </AppShell.Navbar>
         <AppShell.Main>
