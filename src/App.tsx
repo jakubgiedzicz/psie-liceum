@@ -7,18 +7,12 @@ import {
   MantineProvider,
   Image,
   Center,
-  Flex,
-  Box,
-  Stack,
-  Title,
-  Text
-} from "@mantine/core";
+  Flex} from "@mantine/core";
 import { Link, Outlet } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";
 import LinkGroup from "./Components/LinkGroup";
 import Logo from "./assets/logo-preview.png";
 import "@mantine/core/styles.css";
-import LogoIg from "./assets/Instagram_Glyph_Gradient.svg";
 import Footer from "./Components/Footer";
 import styles from './App.module.css'
 
@@ -35,8 +29,8 @@ function App() {
         }}
       >
         <AppShell.Header>
-          <Center className="center_space">
-            <Flex h={200} align={"center"} ml={64}>
+          <Center className="center_space" mx={16}>
+            <Flex h={200} align={"center"}>
               <Link to={"/"}>
                 <Image src={Logo} w={175} />
               </Link>

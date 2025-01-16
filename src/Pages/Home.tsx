@@ -1,12 +1,9 @@
 import {
   BackgroundImage,
   Box,
-  Center,
   Container,
   Divider,
-  Flex,
   Grid,
-  Group,
   Image,
   List,
   SimpleGrid,
@@ -27,7 +24,7 @@ const Home = () => {
           src="https://blog.tryfi.com/content/images/2024/03/happy-dog-yellow-flowers.webp"
           h={700}
         >
-          <Box w={"100%"} h={"100%"} bg={"rgba(255, 255, 255, 0.1)"}>
+          <Box h={"100%"} bg={"rgba(255, 255, 255, 0.1)"}>
             <Stack
               w={"50%"}
               pl={48}
@@ -175,7 +172,7 @@ const Home = () => {
         className={styles.parallax}
         mt={128}
       >
-        <Stack w={"100%"} mih={400} justify="center" align="center">
+        <Stack mih={400} justify="center" align="center">
           <Title order={1} className={styles.intro_text + " " + styles.heading_shadow + ' ' + styles.title2 + ' ' + styles.end_bg} c={theme.colors.yellow[6]}>
             Umów spotkanie
           </Title>

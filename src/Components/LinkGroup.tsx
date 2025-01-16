@@ -4,10 +4,6 @@ import {
   Text,
   Image,
   useMantineTheme,
-  Menu,
-  MenuDropdown,
-  Collapse,
-  Divider,
 } from "@mantine/core";
 import LogoIg from "../assets/Instagram_Glyph_Gradient.svg";
 import styles from "./LinkGroup.module.css";
