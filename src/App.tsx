@@ -35,7 +35,7 @@ function App() {
                 <Image src={Logo} w={175} />
               </Link>
             </Flex>
-            <Group wrap={"wrap"} ml={32} justify="center" visibleFrom="sm">
+            <Group wrap={"wrap"} justify="center" visibleFrom="sm">
               <LinkGroup burger={true} />
             </Group>
             <Burger

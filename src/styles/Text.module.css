@@ -1,0 +1,20 @@
+.title2 {
+  font-size: 3rem;
+}
+.title {
+  font-size: 4rem;
+  text-shadow: 1px 1px 2px black;
+}
+.paragraph {
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+.intro_text {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.heading_shadow {
+  text-shadow: 1px 1px 1px black;
+}
+.link {
+  text-decoration: underline;
+}

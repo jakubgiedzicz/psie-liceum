@@ -14,6 +14,8 @@ import {
 } from "@mantine/core";
 import img_about from "../assets/home-about-me.jpg";
 import styles from "./Home.module.css";
+import text_styles from "../styles/Text.module.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const theme = useMantineTheme();
@@ -35,20 +37,26 @@ const Home = () => {
             >
               <Title
                 order={2}
-                className={styles.title2 + " " + styles.intro_text+ " " + styles.paragraph}
+                className={
+                  text_styles.title2 +
+                  " " +
+                  text_styles.intro_text +
+                  " " +
+                  text_styles.paragraph
+                }
               >
                 Weronika Roszkowska
               </Title>
               <Title
                 order={1}
-                className={styles.title + " " + styles.intro_text}
+                className={text_styles.title + " " + text_styles.intro_text}
                 c={theme.colors.yellow[6]}
               >
                 Psie Liceum
               </Title>
               <Text
                 size="xl"
-                className={styles.intro_text + " " + styles.paragraph}
+                className={text_styles.intro_text + " " + text_styles.paragraph}
                 visibleFrom="sm"
               >
                 Witam Cię serdecznie na mojej stronie. Mam na imię Weronika,
@@ -70,9 +78,15 @@ const Home = () => {
         <Box>
           <Image src={img_about} radius={"25%"} />
         </Box>
-        <Box>
+        <Stack justify="space-around">
           <Stack>
-            <Title order={1} c={theme.colors.yellow[6]} className={styles.heading_shadow}>Lorem Ipsum</Title>
+            <Title
+              order={1}
+              c={theme.colors.yellow[6]}
+              className={text_styles.heading_shadow}
+            >
+              Lorem Ipsum
+            </Title>
             <Text mt={16} fw={500}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
               itaque dolore placeat temporibus! Facere deleniti soluta vitae
@@ -83,11 +97,18 @@ const Home = () => {
               beatae odio quisquam.
             </Text>
           </Stack>
-        </Box>
+          <Link to={"/o-mnie"} className={text_styles.link}>Moje doświadczenie ze zwierzętami</Link>
+        </Stack>
       </SimpleGrid>
       <Divider mt={64} size={"sm"} />
       <Stack mt={64}>
-        <Title order={1} c={theme.colors.yellow[6]} className={styles.heading_shadow}>W czym mogę pomóc</Title>
+        <Title
+          order={1}
+          c={theme.colors.yellow[6]}
+          className={text_styles.heading_shadow}
+        >
+          W czym mogę pomóc
+        </Title>
         <Text>
           Gwarantuję Ci humanitarne metody szkolenia psów, które zadowolą psy
           jak i właścicieli!
@@ -173,7 +194,19 @@ const Home = () => {
         mt={128}
       >
         <Stack mih={400} justify="center" align="center">
-          <Title order={1} className={styles.intro_text + " " + styles.heading_shadow + ' ' + styles.title2 + ' ' + styles.end_bg} c={theme.colors.yellow[6]}>
+          <Title
+            order={1}
+            className={
+              text_styles.intro_text +
+              " " +
+              text_styles.heading_shadow +
+              " " +
+              text_styles.title2 +
+              " " +
+              styles.end_bg
+            }
+            c={theme.colors.yellow[6]}
+          >
             Umów spotkanie
           </Title>
         </Stack>
