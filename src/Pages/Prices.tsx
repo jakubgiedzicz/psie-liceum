@@ -6,17 +6,21 @@ import {
   Stack,
   Text,
   Title,
+  useMantineTheme,
 } from "@mantine/core";
 import text_styles from "../styles/Text.module.css";
 
 const Prices = () => {
+  const theme = useMantineTheme();
   return (
     <>
       <Container>
         <Stack mih={650} pt={32}>
           <List size="xl" listStyleType="none" spacing={"md"}>
             <List.Item>
-              <Title order={1} fw={600} my={32} size={36}>
+              <Title order={1} my={16}
+              className={text_styles.title2 + " " + text_styles.intro_text + " " + text_styles.title_shadow}
+              c={theme.colors.yellow[6]}>
                 Konsultacje indywidualne:
               </Title>
             </List.Item>
@@ -34,7 +38,9 @@ const Prices = () => {
           </List>
           <List size="xl" listStyleType="none" spacing={"md"}>
             <List.Item>
-              <Title order={1} fw={600} my={32} size={36}>
+              <Title order={1} my={16}
+              className={text_styles.title2 + " " + text_styles.intro_text + " " + text_styles.title_shadow}
+              c={theme.colors.yellow[6]}>
                 Zajęcia indywidualne:
               </Title>
             </List.Item>

@@ -42,14 +42,14 @@ const Home = () => {
                   " " +
                   text_styles.intro_text +
                   " " +
-                  text_styles.paragraph
+                  text_styles.paragraph + " " + text_styles.title_shadow
                 }
               >
                 Weronika Roszkowska
               </Title>
               <Title
                 order={1}
-                className={text_styles.title + " " + text_styles.intro_text}
+                className={text_styles.title + " " + text_styles.intro_text + " " + text_styles.title_shadow}
                 c={theme.colors.yellow[6]}
               >
                 Psie Liceum

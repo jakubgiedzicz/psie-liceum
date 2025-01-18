@@ -52,7 +52,6 @@ function App() {
         <AppShell.Main>
           <Outlet />
         </AppShell.Main>
-        <Footer />
       </AppShell>
     </MantineProvider>
   );

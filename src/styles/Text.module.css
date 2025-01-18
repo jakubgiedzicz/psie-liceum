@@ -1,8 +1,10 @@
+.title {
+  font-size: 4rem;
+}
 .title2 {
   font-size: 3rem;
 }
-.title {
-  font-size: 4rem;
+.title_shadow {
   text-shadow: 1px 1px 2px black;
 }
 .paragraph {

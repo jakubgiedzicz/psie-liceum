@@ -2,10 +2,7 @@ import { Group, Stack, Title, Box, Text, Image, useMantineTheme } from '@mantine
 import Logo from '../assets/logo-preview.png';
 import LogoIg from "../assets/Instagram_Glyph_Gradient.svg";
 import styles from './Footer.module.css'
-
-type Props = {}
-
-const Footer = (props: Props) => {
+const Footer = () => {
   const theme = useMantineTheme()
   return (
     <>

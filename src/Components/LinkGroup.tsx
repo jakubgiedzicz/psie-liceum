@@ -8,6 +8,7 @@ import {
 import LogoIg from "../assets/Instagram_Glyph_Gradient.svg";
 import styles from "./LinkGroup.module.css";
 import { useDisclosure } from "@mantine/hooks";
+import text_styles from '../styles/Text.module.css'
 
 type Props = {
   burger: boolean;
