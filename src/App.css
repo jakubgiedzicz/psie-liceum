@@ -1,6 +1,7 @@
 #root {
   --main-theme-color: #fab005;
   text-align: center;
+  width: 100%;
 }
 .center_space {
   justify-content: space-around!important;

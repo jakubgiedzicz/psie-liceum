@@ -30,7 +30,7 @@ const LinkGroup = (props: Props) => {
   };
   return (
     <>
-      <Box pl={props.burger ? 40 : 0}>
+      <Box>
         <Link to={"o-mnie"}>
           <Text
             fw={700}
@@ -46,10 +46,10 @@ const LinkGroup = (props: Props) => {
           </Text>
         </Link>
       </Box>
-      <Link to={"kontakt"}>
+      <Link to={"konsultacje-indywidualne"}>
         <Text
           fw={700}
-          c={location.pathname === "/kontakt" ? theme.colors.cyan[4] : theme.colors.gray[9]}
+          c={location.pathname === "/konsultacje-indywidualne" ? theme.colors.cyan[4] : theme.colors.gray[9]}
           className={
             props.burger
               ? styles.hover_text
@@ -74,10 +74,10 @@ const LinkGroup = (props: Props) => {
           Konsultacje dietetyczne
         </Text>
       </Link>
-      <Link to={"kontakt"}>
+      <Link to={"cennik"}>
         <Text
           fw={700}
-          c={location.pathname === "/kontakt" ? theme.colors.cyan[4] : theme.colors.gray[9]}
+          c={location.pathname === "/cennik" ? theme.colors.cyan[4] : theme.colors.gray[9]}
           className={
             props.burger
               ? styles.hover_text
@@ -122,4 +122,3 @@ const LinkGroup = (props: Props) => {
 };
 
 export default LinkGroup;
-//konsultacje indy, zajecia grupowe > psieprzedszkole - psiapodstawowka, cennik, kontakt, blog
