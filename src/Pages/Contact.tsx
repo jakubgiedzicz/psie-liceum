@@ -6,9 +6,15 @@ import {
   Text,
   Image,
   useMantineTheme,
+  TextInput,
+  Fieldset,
+  Textarea,
+  Button,
 } from "@mantine/core";
 import LogoIg from "../assets/Instagram_Glyph_Gradient.svg";
+import LogoFb from "../assets/Facebook_Logo_Primary.png";
 import styles from "../Components/Footer.module.css";
+import map from "../styles/Map_embed.module.css";
 const Contact = () => {
   const theme = useMantineTheme();
   return (
@@ -25,6 +31,70 @@ const Contact = () => {
           Jestem po to by pomagać. Odezwij się telefonicznie, mailowo lub przez
           moje social media.
         </Text>
+        <Group justify="center" my={24}>
+          <Fieldset legend="Formularz kontaktowy" variant="filled">
+            <form>
+              <TextInput
+                size="md"
+                label="Imię"
+                required
+                maxLength={15}
+                aria-required
+                withAsterisk
+                placeholder="Twoje imię"
+                mt={12}
+              />
+              <TextInput
+                size="md"
+                withAsterisk
+                required
+                aria-required
+                label="Email"
+                type="email"
+                placeholder="Twój email"
+                mt={12}
+              />
+              <TextInput
+                size="md"
+                type="tel"
+                maxLength={9}
+                label="Numer telefonu"
+                placeholder="Twój numer kontaktowy"
+                mt={12}
+              />
+              <Textarea
+                size="md"
+                required
+                aria-required
+                label="Wiadomość"
+                withAsterisk
+                autosize
+                minRows={4}
+                maxRows={4}
+                miw={300}
+                placeholder="Powiedz nam o sobie i swoim pupilu"
+                mt={12}
+              />
+              <Button
+                variant="filled"
+                color={theme.colors.yellow[6]}
+                type="submit"
+                autoContrast
+                mt={12}
+              >
+                Wyślij
+              </Button>
+            </form>
+          </Fieldset>
+          <div className={map.map_container}>
+            <div className={map.map_display}>
+              <iframe
+                className={map.map_display}
+                src="https://www.google.com/maps/embed/v1/place?q=Białystok,+Jurowiecka+1&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+              ></iframe>
+            </div>
+          </div>
+        </Group>
         <Group justify="space-evenly">
           <Stack>
             <Group gap={4}>
@@ -68,9 +138,14 @@ const Contact = () => {
               </Text>
             </Group>
           </Stack>
-          <a href="https://www.facebook.com/veranika.baranouskaya.9">
-            <Image src={LogoIg} w={64} />
-          </a>
+          <Group>
+            <a href="https://www.facebook.com/veranika.baranouskaya.9">
+              <Image src={LogoIg} w={64} />
+            </a>
+            <a href="https://www.facebook.com/veranika.baranouskaya.9">
+              <Image src={LogoFb} w={64} />
+            </a>
+          </Group>
         </Group>
       </Stack>
     </>

@@ -38,8 +38,6 @@ const Home = () => {
               <Title
                 order={2}
                 className={
-                  text_styles.title2 +
-                  " " +
                   text_styles.intro_text +
                   " " +
                   text_styles.paragraph + " " + text_styles.title_shadow
@@ -49,7 +47,7 @@ const Home = () => {
               </Title>
               <Title
                 order={1}
-                className={text_styles.title + " " + text_styles.intro_text + " " + text_styles.title_shadow}
+                className={text_styles.intro_text + " " + text_styles.title_shadow}
                 c={theme.colors.yellow[6]}
               >
                 Psie Liceum
@@ -200,8 +198,6 @@ const Home = () => {
               text_styles.intro_text +
               " " +
               text_styles.heading_shadow +
-              " " +
-              text_styles.title2 +
               " " +
               styles.end_bg
             }

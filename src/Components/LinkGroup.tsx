@@ -5,7 +5,6 @@ import {
   Image,
   useMantineTheme,
 } from "@mantine/core";
-import LogoIg from "../assets/Instagram_Glyph_Gradient.svg";
 import styles from "./LinkGroup.module.css";
 import { useDisclosure } from "@mantine/hooks";
 import text_styles from '../styles/Text.module.css'
@@ -18,17 +17,6 @@ const LinkGroup = (props: Props) => {
   let location = useLocation();
   const theme = useMantineTheme();
   const [opened, { toggle }] = useDisclosure(false);
-  const isBurgerIg = (burger: boolean) => {
-    if (burger) {
-      return (
-        <Box w={32} ml={32}>
-          <a href="https://www.instagram.com/jakub.giedzicz/">
-            <Image src={LogoIg} />
-          </a>
-        </Box>
-      );
-    }
-  };
   return (
     <>
       <Box>
@@ -117,7 +105,6 @@ const LinkGroup = (props: Props) => {
           Blog
         </Text>
       </Link>
-      {isBurgerIg(props.burger)}
     </>
   );
 };
