@@ -2,12 +2,10 @@ import { Link, useLocation } from "react-router-dom";
 import {
   Box,
   Text,
-  Image,
   useMantineTheme,
 } from "@mantine/core";
 import styles from "./LinkGroup.module.css";
 import { useDisclosure } from "@mantine/hooks";
-import text_styles from '../styles/Text.module.css'
 
 type Props = {
   burger: boolean;

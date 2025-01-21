@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import about_me_img from "../assets/about_me_avatar.jpg";
 import text_styles from "../styles/Text.module.css";
+import test from '../assets/certificate-text-samples.jpg'
 import { useLayoutEffect } from "react";
 const AboutMe = () => {
   const theme = useMantineTheme();
@@ -54,18 +55,19 @@ const AboutMe = () => {
           c={theme.colors.yellow[6]}
           className={text_styles.title_shadow}
         >
-          Moje doświadczenie
+          Moje certyfikaty
         </Title>
         <SimpleGrid
-          cols={{ base: 2, sm: 3, md: 4, lg: 5 }}
-          spacing={{ base: 64, xl: 96 }}
+          cols={{ base: 1, sm: 2, md: 3, lg: 4 }}
+          spacing={32}
           verticalSpacing={{ base: 64 }}
+          px={'10%'}
+          mt={32}
         >
-          <Center>aha</Center>
-          <Center>aha</Center>
-          <Center>aha</Center>
-          <Center>aha</Center>
-          <Center>aha</Center>
+          <Image src={test}/>
+          <Image src={test}/>
+          <Image src={test}/>
+          <Image src={test}/>
         </SimpleGrid>
       </Container>
     </>

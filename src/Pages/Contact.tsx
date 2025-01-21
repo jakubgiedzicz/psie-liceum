@@ -31,7 +31,7 @@ const Contact = () => {
           Jestem po to by pomagać. Odezwij się telefonicznie, mailowo lub przez
           moje social media.
         </Text>
-        <Group justify="center" my={24}>
+        <Group justify="center" my={24} gap={64}>
           <Fieldset legend="Formularz kontaktowy" variant="filled">
             <form>
               <TextInput
