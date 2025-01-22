@@ -24,12 +24,12 @@ const Contact = () => {
           order={1}
           c={theme.colors.yellow[6]}
           className={styles.footer_text_shadow}
+          px={'20%'}
         >
-          Masz pytania? Porozmawiajmy.
+          Masz pytania, chcesz zapisać swojego psa na zajęcia, a może po prostu chcesz pogadać o psich przygodach?
         </Title>
         <Text fw={600}>
-          Jestem po to by pomagać. Odezwij się telefonicznie, mailowo lub przez
-          moje social media.
+        Podaj łapę (i kilka szczegółów), a ja szybko się z Tobą skontaktuję!
         </Text>
         <Group justify="center" my={24} gap={64}>
           <Fieldset legend="Formularz kontaktowy" variant="filled">
@@ -62,17 +62,34 @@ const Contact = () => {
                 placeholder="Twój numer kontaktowy"
                 mt={12}
               />
+              <TextInput
+                size="md"
+                label="Rasa"
+                required
+                maxLength={15}
+                aria-required
+                withAsterisk
+                placeholder="Rasa psa"
+                mt={12}
+              />
+              <TextInput
+                size="md"
+                label="Wiek"
+                required
+                maxLength={15}
+                aria-required
+                withAsterisk
+                placeholder="Wiek twojego psa"
+                mt={12}
+              />
               <Textarea
                 size="md"
-                required
-                aria-required
                 label="Wiadomość"
-                withAsterisk
                 autosize
-                minRows={4}
-                maxRows={4}
+                minRows={3}
+                maxRows={3}
                 miw={300}
-                placeholder="Powiedz nam o sobie i swoim pupilu"
+                placeholder="Opowiedz mi coś więcej o waszej historii!"
                 mt={12}
               />
               <Button
@@ -113,7 +130,7 @@ const Contact = () => {
                 ></path>
               </svg>
               <Text ta={"left"} fw={500}>
-                E-mail: weronika@gmail.com
+                E-mail: psieliceum@wp.pl
               </Text>
             </Group>
             <Group gap={4}>
@@ -134,7 +151,7 @@ const Contact = () => {
                 </svg>
               </Box>
               <Text ta={"left"} fw={500}>
-                Tel: +48 123 465 789
+                Tel: +48 724 084 610
               </Text>
             </Group>
           </Stack>
