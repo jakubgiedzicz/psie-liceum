@@ -103,7 +103,7 @@ const Prices = () => {
               type="Psiapodstawówka"
               title2='"Klasa z wyższym poziomem merdania" (szczeniaki od 6 miesiąca zycia)'
               desc="Dla psich juniorów, którzy chcą opanować komendy i grzeczność do perfekcji. Zajęcia grupowe, które uczą i bawią - tak, że każdy pies będzie gwiazdą podwórka! "
-              price="ustalana indywidualnie"
+              price="400zł za kurs (8 zajęć)"
             />
           </List>
           <Title order={3} size='xl'>
@@ -113,21 +113,6 @@ const Prices = () => {
             <Text span fw={400} size="xl" fs='italic' c='dark'> Cena: ustalana indywidualnie</Text>
           </Text>
           <Text fs='italic' size="lg" fw={400} c={theme.colors.gray[8]} mt={16}>"Nie tylko uczymy psy - uczymy ludzi, jak je kochać jeszcze bardziej."</Text>
-          <Stack>
-            <List size="xl" listStyleType="none" spacing={"md"} my={48}>
-              <List.Item>
-                <Text size="md" fs={"italic"} c={"dark"}>
-                  Konsultacje mogą trwać do 2 godzin
-                </Text>
-              </List.Item>
-              <List.Item>
-                <Text size="md" fs={"italic"} c={"dark"}>
-                  Zajęcia trwają około godziny, odbywają się na zamkniętym
-                  dworze
-                </Text>
-              </List.Item>
-            </List>
-          </Stack>
         </Stack>
       </Container>
     </>
