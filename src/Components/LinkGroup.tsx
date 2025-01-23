@@ -4,13 +4,13 @@ import {
   Menu,
   MenuDropdown,
   MenuItem,
-  MenuLabel,
   MenuTarget,
   Text,
   useMantineTheme,
 } from "@mantine/core";
 import styles from "./LinkGroup.module.css";
 import { useDisclosure } from "@mantine/hooks";
+import { useState } from "react";
 
 type Props = {
   burger: boolean;
@@ -20,6 +20,8 @@ const LinkGroup = (props: Props) => {
   let location = useLocation();
   const theme = useMantineTheme();
   const [opened, { toggle }] = useDisclosure(false);
+  const [konsultacje, setKonsultacje] = useState(false);
+  const [grupowe, setGrupowe] = useState(false);
   return (
     <>
       <Box>
@@ -42,13 +44,13 @@ const LinkGroup = (props: Props) => {
           </Text>
         </Link>
       </Box>
-      <Menu trigger="hover" closeDelay={200}>
+      <Menu trigger="click" classNames={{ item: styles.menu_item }} opened={konsultacje} onChange={setKonsultacje}>
       <MenuTarget>
-        <Link to={"konsultacje-indywidualne"}>
+        <Link to={"konsultacje"}>
           <Text
             fw={700}
             c={
-              location.pathname === "/konsultacje-indywidualne"
+              location.pathname === "/konsultacje"
                 ? theme.colors.cyan[4]
                 : theme.colors.gray[9]
             }
@@ -65,22 +67,18 @@ const LinkGroup = (props: Props) => {
       </MenuTarget>
       <MenuDropdown>
         <MenuItem>
-          <Link to={"konsultacje-indywidualne"}>
+          <Link to={"konsultacje-behawioralne"}>
             <Text
               fw={700}
               c={
-                location.pathname === "/konsultacje-indywidualne"
+                location.pathname === "/konsultacje-behawioralne"
                   ? theme.colors.cyan[4]
                   : theme.colors.gray[9]
               }
-              className={
-                props.burger
-                  ? styles.hover_text
-                  : styles.hover_text + " " + styles.burger_element
-              }
+              className={styles.hover_text}
               size="xl"
             >
-              Konsultacje indywidualne
+              Konsultacje behawioralne
             </Text>
           </Link>
         </MenuItem>
@@ -93,11 +91,7 @@ const LinkGroup = (props: Props) => {
                   ? theme.colors.cyan[4]
                   : theme.colors.gray[9]
               }
-              className={
-                props.burger
-                  ? styles.hover_text
-                  : styles.hover_text + " " + styles.burger_element
-              }
+              className={styles.hover_text}
               size="xl"
             >
               Konsultacje dietetyczne
@@ -128,7 +122,7 @@ const LinkGroup = (props: Props) => {
         </Link>
       </MenuTarget>
       <MenuDropdown>
-        <MenuItem>
+        <MenuItem c='red'>
           <Link to={"Psieprzedszkole"}>
             <Text
               fw={700}
@@ -137,11 +131,7 @@ const LinkGroup = (props: Props) => {
                   ? theme.colors.cyan[4]
                   : theme.colors.gray[9]
               }
-              className={
-                props.burger
-                  ? styles.hover_text
-                  : styles.hover_text + " " + styles.burger_element
-              }
+              className={styles.hover_text}
               size="xl"
             >
               Psieprzedszkole
@@ -157,11 +147,7 @@ const LinkGroup = (props: Props) => {
                   ? theme.colors.cyan[4]
                   : theme.colors.gray[9]
               }
-              className={
-                props.burger
-                  ? styles.hover_text
-                  : styles.hover_text + " " + styles.burger_element
-              }
+              className={styles.hover_text}
               size="xl"
             >
               Psiapodstawówka
@@ -183,6 +169,7 @@ const LinkGroup = (props: Props) => {
               ? styles.hover_text
               : styles.hover_text + " " + styles.burger_element
           }
+          mt={konsultacje ? 60 : 20}
           size="xl"
         >
           Cennik

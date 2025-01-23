@@ -5,8 +5,12 @@ import AboutMe from "../Pages/AboutMe";
 import Contact from "../Pages/Contact";
 import Blog from "../Pages/Blog";
 import Prices from "../Pages/Prices";
-import Individual from "../Pages/Individual";
+import Behavioral from "../Pages/Behavioral";
 import Diet from "../Pages/Diet";
+import Psieprzedszkole from "../Pages/Psieprzedszkole";
+import Psiapodstawowka from "../Pages/Psiapodstawowka";
+import Group from "../Pages/Group";
+import Consult from "../Pages/Consult";
 
 export const Router = createBrowserRouter([
   {
@@ -15,8 +19,12 @@ export const Router = createBrowserRouter([
     children: [
       { path: '', element: <Home />},
       { path: 'o-mnie', element: <AboutMe />},
-      { path: 'konsultacje-indywidualne', element: <Individual />},
+      { path: 'konsultacje', element: <Consult />},
+      { path: 'konsultacje-behawioralne', element: <Behavioral />},
       { path: 'konsultacje-dietetyczne', element: <Diet />},
+      { path: 'zajecia-grupowe', element: <Group />},
+      { path: 'psieprzedszkole', element: <Psieprzedszkole />},
+      { path: 'psiapodstawowka', element: <Psiapodstawowka />},
       { path: 'cennik', element: <Prices />},
       { path: 'kontakt', element: <Contact />},
       { path: 'blog', element: <Blog />},

@@ -112,7 +112,7 @@ const Prices = () => {
           <Text size="xl">Chcesz uwiecznić swojego pupila w wyjątkowy sposób? Moje tatuaże to małe dzieła sztuki, które oddają charakter twojego czworonożnego przyjaciela. -
             <Text span fw={400} size="xl" fs='italic' c='dark'> Cena: ustalana indywidualnie</Text>
           </Text>
-          <Text fs='italic' size="lg" fw={400} c={theme.colors.gray[8]} mt={16}>"Nie tylko uczymy psy - uczymy ludzi, jak je kochać jeszcze bardziej."</Text>
+          <Text fs='italic' size="lg" fw={400} c={theme.colors.gray[8]} my={16}>"Nie tylko uczymy psy - uczymy ludzi, jak je kochać jeszcze bardziej."</Text>
         </Stack>
       </Container>
     </>
