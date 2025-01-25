@@ -1,12 +1,5 @@
 #root {
   --main-theme-color: #fab005;
-  --menu-item-color: #fab005;
   text-align: center;
   width: 100%;
-}
-a:-webkit-any-link:hover {
- color: #fab005;
-}
-.center_space {
-  justify-content: space-around!important;
 }

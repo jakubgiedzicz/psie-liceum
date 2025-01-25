@@ -14,11 +14,3 @@
 .hover_text:hover {
   color: var(--main-theme-color)!important;
 }
-.menu_item {
-  &[data-hovered] {
-    color: var(--main-theme-color)!important;
-  }
-}
-.hover_text2 {
-  background-color: red;
-}

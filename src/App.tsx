@@ -13,7 +13,6 @@ import { useDisclosure } from "@mantine/hooks";
 import LinkGroup from "./Components/LinkGroup";
 import Logo from "./assets/logo-preview.png";
 import "@mantine/core/styles.css";
-import Footer from "./Components/Footer";
 import styles from './App.module.css'
 
 function App() {
@@ -29,25 +28,21 @@ function App() {
         }}
       >
         <AppShell.Header>
-          <Center className="center_space" mx={16}>
-            <Flex h={200} align={"center"}>
+          <Group justify="space-around" align="stretch" h='100%'>
               <Link to={"/"}>
                 <Image src={Logo} w={175} />
               </Link>
-            </Flex>
-            <Group wrap={"wrap"} justify="center" visibleFrom="sm">
               <LinkGroup burger={true} />
-            </Group>
             <Burger
               opened={opened}
               onClick={toggle}
               hiddenFrom="sm"
               size="xl"
             />
-          </Center>
+          </Group>
         </AppShell.Header>
         <AppShell.Navbar pb={opened ? 48 : 0} className={opened ? styles.navbar_shadow : ''}>
-          <LinkGroup burger={false} />
+          {/* <LinkGroup burger={false} /> */}
         </AppShell.Navbar>
         <AppShell.Main>
           <Outlet />
