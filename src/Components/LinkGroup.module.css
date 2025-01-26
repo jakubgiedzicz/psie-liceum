@@ -14,3 +14,30 @@
 .hover_text:hover {
   color: var(--main-theme-color)!important;
 }
+.header {
+  background-color: var(--mantine-color-body);
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: var(--mantine-radius-sm);
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 500;
+
+  @mixin hover {
+    background-color: light-dark(var(--mantine-color-yellow-5), var(--mantine-color-yellow-5));
+  }
+}
+
+.linkLabel {
+  margin-right: 5px;
+}

@@ -28,7 +28,7 @@ function App() {
         }}
       >
         <AppShell.Header>
-          <Group justify="space-around" align="stretch" h='100%'>
+          <Group justify="space-around" h={'100%'}>
               <Link to={"/"}>
                 <Image src={Logo} w={175} />
               </Link>
