@@ -21,6 +21,7 @@ import classes from "./Components/LinkGroup.module.css";
 
 function App() {
   const [opened, { toggle }] = useDisclosure();
+  const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
   const links = (mobile: boolean) => {
     if (mobile) {
       return <LinkGroup burger={false} />;
@@ -35,7 +36,7 @@ function App() {
         navbar={{
           width: 300,
           breakpoint: "md",
-          collapsed: { mobile: !opened, desktop: true },
+          collapsed: { mobile: !opened, desktop: desktopOpened },
         }}
       >
         <AppShell.Header>
@@ -54,7 +55,6 @@ function App() {
         </AppShell.Header>
         <AppShell.Navbar
           className={opened ? styles.navbar_shadow : ""}
-          hiddenFrom="md"
         >
           {links(false)}
         </AppShell.Navbar>

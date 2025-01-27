@@ -68,6 +68,7 @@ const LinkGroup = (props: Props) => {
               to={link.link}
               className={classes.link}
               label={link.label}
+              onClick={(e) => e.preventDefault()}
               rightSection={props.burger ? <IconChevronRight size={16} stroke={1.5} /> : <IconChevronDown size={16} stroke={1.5} />}
             />
           </Menu.Target>
