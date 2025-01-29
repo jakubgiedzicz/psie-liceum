@@ -12,16 +12,18 @@ import {
   Stack,
 } from "@mantine/core";
 import { Link, Outlet } from "react-router-dom";
-import { useDisclosure } from "@mantine/hooks";
+import { useClickOutside, useDisclosure, useViewportSize } from "@mantine/hooks";
 import LinkGroup from "./Components/LinkGroup";
 import Logo from "./assets/logo-preview.png";
 import "@mantine/core/styles.css";
 import styles from "./App.module.css";
 import classes from "./Components/LinkGroup.module.css";
+import { useEffect } from "react";
 
 function App() {
-  const [opened, { toggle }] = useDisclosure();
-  const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
+  const [openedBurger, handlersBurger] = useDisclosure();
+  const [openedDesktop, handlersDesktop] = useDisclosure(true);
+  const { height, width } = useViewportSize();
   const links = (mobile: boolean) => {
     if (mobile) {
       return <LinkGroup burger={false} />;
@@ -29,14 +31,24 @@ function App() {
       return <LinkGroup burger={true} />;
     }
   };
+  const handleClick = () => {
+    handlersDesktop.toggle()
+    handlersBurger.toggle()
+  }
+  useEffect(() => {
+    if(width>= 992){
+      handlersBurger.close()
+      handlersDesktop.open()
+    }
+  }, [width])
   return (
     <MantineProvider>
       <AppShell
         header={{ height: 200 }}
         navbar={{
           width: 300,
-          breakpoint: "md",
-          collapsed: { mobile: !opened, desktop: desktopOpened },
+          breakpoint: "xs",
+          collapsed: { mobile: !openedBurger, desktop: openedDesktop },
         }}
       >
         <AppShell.Header>
@@ -47,14 +59,14 @@ function App() {
             <header className={classes.header}>
               <Container size="md">
                 <div className={classes.inner}>{links(true)}</div>
-                <Burger opened={opened} onClick={toggle} size="xl" hiddenFrom="md" />
+                <Burger opened={openedBurger} onClick={() => handleClick()} size="xl" hiddenFrom="md" />
               </Container>
             </header>
 
           </Group>
         </AppShell.Header>
         <AppShell.Navbar
-          className={opened ? styles.navbar_shadow : ""}
+          className={openedBurger ? styles.navbar_shadow : ""}
         >
           {links(false)}
         </AppShell.Navbar>
