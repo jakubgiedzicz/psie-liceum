@@ -6,13 +6,10 @@ import {
   Group,
   MantineProvider,
   Image,
-  Center,
-  Flex,
   Container,
-  Stack,
 } from "@mantine/core";
 import { Link, Outlet } from "react-router-dom";
-import { useClickOutside, useDisclosure, useViewportSize } from "@mantine/hooks";
+import { useDisclosure, useViewportSize } from "@mantine/hooks";
 import LinkGroup from "./Components/LinkGroup";
 import Logo from "./assets/logo-preview.png";
 import "@mantine/core/styles.css";
@@ -24,11 +21,12 @@ function App() {
   const [openedBurger, handlersBurger] = useDisclosure();
   const [openedDesktop, handlersDesktop] = useDisclosure(true);
   const { height, width } = useViewportSize();
-  const links = (mobile: boolean) => {
+  const [menu, handlersMenu] = useDisclosure(true)
+  const links = (mobile: boolean, desktop:boolean) => {
     if (mobile) {
-      return <LinkGroup burger={false} />;
+      return <LinkGroup burger={false} openDesktop={desktop}/>;
     } else {
-      return <LinkGroup burger={true} />;
+      return <LinkGroup burger={true} openDesktop={desktop}/>;
     }
   };
   const handleClick = () => {
@@ -39,6 +37,11 @@ function App() {
     if(width>= 992){
       handlersBurger.close()
       handlersDesktop.open()
+    }
+    if(width>576 && width <992){
+      handlersMenu.open()
+    } else {
+      handlersMenu.close()
     }
   }, [width])
   return (
@@ -58,7 +61,7 @@ function App() {
             </Link>
             <header className={classes.header}>
               <Container size="md">
-                <div className={classes.inner}>{links(true)}</div>
+                <div className={classes.inner}>{links(true, menu)}</div>
                 <Burger opened={openedBurger} onClick={() => handleClick()} size="xl" hiddenFrom="md" />
               </Container>
             </header>
@@ -68,7 +71,7 @@ function App() {
         <AppShell.Navbar
           className={openedBurger ? styles.navbar_shadow : ""}
         >
-          {links(false)}
+          {links(false, menu)}
         </AppShell.Navbar>
         <AppShell.Main>
           <Outlet />

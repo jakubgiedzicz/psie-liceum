@@ -1,20 +1,17 @@
 import { NavLink as Link } from "react-router-dom";
 import {
-  Burger,
-  Center,
-  Container,
-  Grid,
   Group,
   Menu,
   NavLink,
   Stack,
 } from "@mantine/core";
 import classes from "./LinkGroup.module.css";
-import { useDisclosure } from "@mantine/hooks";
 import { IconChevronDown, IconChevronRight } from "@tabler/icons-react";
+import { ReactElement } from "react";
 
 type Props = {
   burger: boolean;
+  openDesktop: boolean
 };
 const links = [
   { link: "/o-mnie", label: "O mnie" },
@@ -38,10 +35,20 @@ const links = [
   { link: "/kontakt", label: "Kontakt" },
   { link: "/blog", label: "Blog" },
 ];
+const links2 = [
+  { link: "/o-mnie", label: "O mnie" },
+      { link: "/konsultacje-behawioralne", label: "Konsultacje behawioralne" },
+      { link: "/konsultacje-dietetyczne", label: "Konsultacje dietetyczne" },
+      { link: "/psieprzedszkole", label: "Psieprzedszkole" },
+      { link: "/psiapodstawowka", label: "Psiapodstawówka" },
+  { link: "/cennik", label: "Cennik" },
+  { link: "/kontakt", label: "Kontakt" },
+  { link: "/blog", label: "Blog" },
+];
 const LinkGroup = (props: Props) => {
-  const [opened, { toggle }] = useDisclosure(false);
-
-  const items = links.map((link) => {
+  var items:ReactElement[]
+  if(!props.burger && !props.openDesktop || props.burger && props.openDesktop){
+  items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
       <Menu.Item key={item.link}>
         <NavLink
@@ -86,7 +93,17 @@ const LinkGroup = (props: Props) => {
         label={link.label}
       />
     );
-  });
+  })} else {
+    items = links2.map((link) => 
+      <NavLink
+    key={link.label}
+    component={Link}
+    to={link.link}
+    className={classes.link}
+    label={link.label}
+  />
+    )
+  }
   const mobile = (mobile: boolean) => {
     if (!mobile) {
       return (
