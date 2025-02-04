@@ -1,5 +1,4 @@
 import { Group, Text, Title, useMantineTheme, Image, List, Grid } from "@mantine/core";
-import React from "react";
 import text_style from "../styles/Text.module.css";
 import img from "../assets/beautiful-adorable-little-puppy-cute-600nw-2360693945.webp";
 import { IconBone, IconCirclesRelation, IconDog, IconHandStop, IconPaw } from "@tabler/icons-react";
