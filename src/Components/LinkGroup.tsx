@@ -63,7 +63,7 @@ const LinkGroup = (props: Props) => {
       return (
         <Menu
           key={link.label}
-          trigger="hover"
+          trigger="click-hover"
           transitionProps={{ exitDuration: 0 }}
           withinPortal
           position={props.burger ? "right" : "bottom"}
