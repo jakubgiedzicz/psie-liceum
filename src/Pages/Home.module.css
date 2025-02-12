@@ -1,7 +1,7 @@
 .box_shadow {
-  -webkit-box-shadow: 8px 8px 8px -9px rgba(66, 68, 90, 1);
-  -moz-box-shadow: 8px 8px 8px -9px rgba(66, 68, 90, 1);
-  box-shadow: 8px 8px 8px -9px rgba(66, 68, 90, 1);
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 0px 10px -5px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 10px -5px rgba(66, 68, 90, 1);
 }
 .parallax {
   background-attachment: fixed;
@@ -15,4 +15,10 @@
 
 .end_bg {
   cursor: pointer;
+}
+.link {
+  color: var(--main-theme-color);
+}
+.bg {
+  background-color: var(--main-secondary-color);
 }

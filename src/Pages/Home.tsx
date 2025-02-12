@@ -1,6 +1,8 @@
 import {
   BackgroundImage,
   Box,
+  Button,
+  Center,
   Container,
   Divider,
   Grid,
@@ -16,6 +18,7 @@ import img_about from "../assets/home-about-me.jpg";
 import styles from "./Home.module.css";
 import text_styles from "../styles/Text.module.css";
 import { Link } from "react-router-dom";
+import { IconArrowRight } from "@tabler/icons-react";
 
 const Home = () => {
   const theme = useMantineTheme();
@@ -26,7 +29,7 @@ const Home = () => {
           src="https://blog.tryfi.com/content/images/2024/03/happy-dog-yellow-flowers.webp"
           h={700}
         >
-          <Box h={"100%"} bg={"rgba(255, 255, 255, 0.1)"}>
+          <Box h={"100%"} bg={"rgba(0, 0, 0, 0.1)"}>
             <Stack
               w={"50%"}
               pl={48}
@@ -40,14 +43,18 @@ const Home = () => {
                 className={
                   text_styles.intro_text +
                   " " +
-                  text_styles.paragraph + " " + text_styles.title_shadow
+                  text_styles.paragraph +
+                  " " +
+                  text_styles.title_shadow
                 }
               >
                 Weronika Roszkowska
               </Title>
               <Title
                 order={1}
-                className={text_styles.intro_text + " " + text_styles.title_shadow}
+                className={
+                  text_styles.intro_text + " " + text_styles.title_shadow
+                }
                 c={theme.colors.yellow[6]}
               >
                 Psie Liceum
@@ -67,8 +74,7 @@ const Home = () => {
       </Container>
       <SimpleGrid
         mt={64}
-        ml={"10%"}
-        mr={"10%"}
+        mx={"10%"}
         cols={{ base: 1, lg: 2 }}
         spacing={{ base: 64, xl: 96 }}
         verticalSpacing={{ base: 64 }}
@@ -76,16 +82,19 @@ const Home = () => {
         <Box>
           <Image src={img_about} radius={"25%"} />
         </Box>
-        <Stack justify="space-around">
+        <Stack justify="space-between">
           <Stack>
+            <Title order={3} fw={400}>
+              O mnie
+            </Title>
             <Title
               order={1}
               c={theme.colors.yellow[6]}
               className={text_styles.heading_shadow}
             >
-              Lorem Ipsum
+              Weronika Roszkowska
             </Title>
-            <Text mt={16} fw={500}>
+            <Text mt={16} fw={400} size="lg" ta="left">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
               itaque dolore placeat temporibus! Facere deleniti soluta vitae
               dolore, voluptatibus reprehenderit repellendus sint vel sed
@@ -95,7 +104,18 @@ const Home = () => {
               beatae odio quisquam.
             </Text>
           </Stack>
-          <Link to={"/o-mnie"} className={text_styles.link}>Moje doświadczenie ze zwierzętami</Link>
+          <Center>
+            <Button
+              variant="filled"
+              size="md"
+              component={Link}
+              to="/o-mnie"
+              color={theme.colors.yellow[6]}
+              rightSection={<IconArrowRight size={16} />}
+            >
+              Więcej o mnie
+            </Button>
+          </Center>
         </Stack>
       </SimpleGrid>
       <Divider mt={64} size={"sm"} />
@@ -107,104 +127,80 @@ const Home = () => {
         >
           W czym mogę pomóc
         </Title>
-        <Text>
+        <Title order={2} fw={400}>
           Gwarantuję Ci humanitarne metody szkolenia psów, które zadowolą psy
           jak i właścicieli!
-        </Text>
-        <Grid
-          gutter={{ base: 5, xs: 50, md: 50, xl: 80 }}
-          pl={96}
-          pr={96}
-          mt={32}
-        >
-          <Grid.Col
-            span={{ base: 12, sm: 4, lg: 4 }}
-            className={styles.box_shadow}
-          >
-            <Stack>
-              <Text fw={600}>Konsultacje indywidualne</Text>
-              <List ta={"left"}>
-                <List.Item>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit
-                </List.Item>
-                <List.Item>Atque itaque dolore placeat temporibus!</List.Item>
-                <List.Item>
-                  Facere deleniti soluta vitae dolore, voluptatibus
-                  reprehenderit
-                </List.Item>
-                <List.Item>
-                  repellendus sint vel sed asperiores repudiandae accusamus
-                  alias
-                </List.Item>
-              </List>
-            </Stack>
-          </Grid.Col>
-          <Grid.Col
-            span={{ base: 12, sm: 4, lg: 4 }}
-            className={styles.box_shadow}
-          >
-            <Stack>
-              <Text fw={600}>Zajecia grupowe</Text>
-              <List ta={"left"}>
-                <List.Item>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit
-                </List.Item>
-                <List.Item>Atque itaque dolore placeat temporibus!</List.Item>
-                <List.Item>
-                  Facere deleniti soluta vitae dolore, voluptatibus
-                  reprehenderit
-                </List.Item>
-                <List.Item>
-                  repellendus sint vel sed asperiores repudiandae accusamus
-                  alias
-                </List.Item>
-              </List>
-            </Stack>
-          </Grid.Col>
-          <Grid.Col
-            span={{ base: 12, sm: 4, lg: 4 }}
-            className={styles.box_shadow}
-          >
-            <Stack>
-              <Text fw={600}>Konsultacje dietetyczne</Text>
-              <List ta={"left"}>
-                <List.Item>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit
-                </List.Item>
-                <List.Item>Atque itaque dolore placeat temporibus!</List.Item>
-                <List.Item>
-                  Facere deleniti soluta vitae dolore, voluptatibus
-                  reprehenderit
-                </List.Item>
-                <List.Item>
-                  repellendus sint vel sed asperiores repudiandae accusamus
-                  alias
-                </List.Item>
-              </List>
-            </Stack>
-          </Grid.Col>
-        </Grid>
+        </Title>
+        <SimpleGrid mx={64} my={32} cols={{ base: 1, sm: 2, md: 3 }} spacing={{ base: 10, sm: 'xl' }}>
+          <Stack p={16}>
+            <Title order={2} fw={400}>
+              Konsultacje indywidualne
+            </Title>
+            <List ta={"left"}>
+              <List.Item>
+              Analiza zachowań psa oraz rozpoznanie problemów
+              </List.Item>
+              <List.Item>Nauka posłuszeństwa oraz prawidłowych wzorców</List.Item>
+              <List.Item>
+                Nauka kontroli emocji i podstawowych komend
+              </List.Item>
+              <List.Item>
+              Wskazówki dla właścicieli skąd wynikają pewne zachowania zwierzaka
+              </List.Item>
+            </List>
+          </Stack>
+          <Stack p={16}>
+            <Title order={2} fw={400}>
+              Zajęcia grupowe
+            </Title>
+            <List ta={"left"}>
+              <List.Item>
+                Oswojenie oraz zaprzyjaźnienie ze światem zewnętrznym
+              </List.Item>
+              <List.Item>Socjalizacja i nauka samokontroli wśród innych psów</List.Item>
+              <List.Item>
+                Wypracowanie odpowiedniej komunikacji
+              </List.Item>
+              <List.Item>
+                Nauka zabaw i zachowań w grupie
+              </List.Item>
+            </List>
+          </Stack>
+          <Stack p={16}>
+            <Title order={2} fw={400}>
+              Konsultacje dietetyczne
+            </Title>
+            <List ta={"left"}>
+              <List.Item>
+              Pomoc w doborze odpowiedniej diety
+              </List.Item>
+              <List.Item>Wypracowanie pozytywnych zachowań przy jedzeniu</List.Item>
+              <List.Item>
+                Poszerzenie horyzontów wybrednego psa
+              </List.Item>
+              <List.Item>
+                Praca w kierunku odzyskania prawidłowej masy ciała
+              </List.Item>
+            </List>
+          </Stack>
+        </SimpleGrid>
       </Stack>
       <BackgroundImage
         src={img_about}
         mih={400}
         className={styles.parallax}
-        mt={128}
       >
         <Stack mih={400} justify="center" align="center">
-          <Title
-            order={1}
-            className={
-              text_styles.intro_text +
-              " " +
-              text_styles.heading_shadow +
-              " " +
-              styles.end_bg
-            }
-            c={theme.colors.yellow[6]}
+          <Button
+            variant="filled"
+            size="xl"
+            component={Link}
+            to="/kontakt"
+            color={theme.colors.yellow[6]}
+            rightSection={<IconArrowRight size={16} />}
           >
-            Umów spotkanie
-          </Title>
+            Kontakt
+          </Button>
         </Stack>
       </BackgroundImage>
     </>

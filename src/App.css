@@ -1,5 +1,6 @@
 #root {
   --main-theme-color: #fab005;
+  --main-secondary-color: rgba(34, 139, 230, 0.1);
   text-align: center;
   width: 100%;
 }
