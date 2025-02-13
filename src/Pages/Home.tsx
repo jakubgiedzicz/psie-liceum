@@ -84,15 +84,12 @@ const Home = () => {
         </Box>
         <Stack justify="space-between">
           <Stack>
-            <Title order={3} fw={400}>
-              O mnie
-            </Title>
             <Title
               order={1}
               c={theme.colors.yellow[6]}
               className={text_styles.heading_shadow}
             >
-              Weronika Roszkowska
+              Czym się zajmuję
             </Title>
             <Text mt={16} fw={400} size="lg" ta="left">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
@@ -133,9 +130,11 @@ const Home = () => {
         </Title>
         <SimpleGrid mx={64} my={32} cols={{ base: 1, sm: 2, md: 3 }} spacing={{ base: 10, sm: 'xl' }}>
           <Stack p={16}>
-            <Title order={2} fw={400}>
+            <Button component={Link} to='/konsultacje-behawioralne' variant="subtle" mih={72} color={theme.colors.yellow[6]}>
+            <Title order={2} fw={500} textWrap="wrap">
               Konsultacje indywidualne
             </Title>
+            </Button>
             <List ta={"left"}>
               <List.Item>
               Analiza zachowań psa oraz rozpoznanie problemów
@@ -150,9 +149,11 @@ const Home = () => {
             </List>
           </Stack>
           <Stack p={16}>
-            <Title order={2} fw={400}>
+          <Button component={Link} to='/konsultacje-behawioralne' variant="subtle" mih={72} color={theme.colors.yellow[6]}>
+            <Title order={2} fw={500} textWrap="wrap">
               Zajęcia grupowe
             </Title>
+            </Button>
             <List ta={"left"}>
               <List.Item>
                 Oswojenie oraz zaprzyjaźnienie ze światem zewnętrznym
@@ -167,9 +168,11 @@ const Home = () => {
             </List>
           </Stack>
           <Stack p={16}>
-            <Title order={2} fw={400}>
+          <Button component={Link} to='/konsultacje-behawioralne' variant="subtle" mih={72} color={theme.colors.yellow[6]}>
+            <Title order={2} fw={500} textWrap="wrap">
               Konsultacje dietetyczne
             </Title>
+            </Button>
             <List ta={"left"}>
               <List.Item>
               Pomoc w doborze odpowiedniej diety

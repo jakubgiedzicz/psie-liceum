@@ -22,3 +22,6 @@
 .bg {
   background-color: var(--main-secondary-color);
 }
+.text_secondary {
+  color: var(--main-secondary-color);
+}
