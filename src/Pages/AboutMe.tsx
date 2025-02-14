@@ -1,5 +1,7 @@
 import {
+  Box,
   Image,
+  Modal,
   SimpleGrid,
   Stack,
   Text,
@@ -9,14 +11,20 @@ import {
 import about_me_img from "../assets/about_me_avatar.jpg";
 import text_styles from "../styles/Text.module.css";
 import test from "../assets/certificate-text-samples.jpg";
-import { useLayoutEffect } from "react";
+import styles from '../Pages/AboutMe.module.css'
+import { useEffect } from "react";
+import '@mantine/carousel/styles.css';
+import { useDisclosure } from "@mantine/hooks";
+import { Carousel } from "@mantine/carousel";
 const AboutMe = () => {
+  const [opened, { open, close }] = useDisclosure(false);
   const theme = useMantineTheme();
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
+  useEffect(() => {
+    // window.scrollTo(0, 0);
+    document.title = "Psie Liceum - O mnie"
   }, []);
   return (
-    <>
+    <Box className={styles.paws_bg}>
       <SimpleGrid mx={"15%"}
           cols={{ base: 1, md: 2 }}
           mt={32}>
@@ -43,7 +51,7 @@ const AboutMe = () => {
               treningu, żywieniowej konsultacji czy w studiu tatuażu.
             </Text>
         </Stack>
-          <Image src={about_me_img} radius={'5%'} h={400}/>
+          <Image src={about_me_img} radius={'5%'} h={400} className={styles.paws_bg}/>
       </SimpleGrid>
       <Stack mt={64}>
         <Text ta={'left'} c={theme.colors.gray[8]} px={'15%'}>
@@ -77,7 +85,15 @@ const AboutMe = () => {
           mt={32}
           pb={32}
         >
-          <Image src={test} />
+          <Modal opened={opened} onClose={close} title="Moje certyfikaty" centered bg={'red'}>
+            <Carousel withIndicators loop>
+              <Carousel.Slide><Image src={test} /></Carousel.Slide>
+              <Carousel.Slide><Image src={test}/></Carousel.Slide>
+              <Carousel.Slide><Image src={test}/></Carousel.Slide>
+              <Carousel.Slide><Image src={test}/></Carousel.Slide>
+            </Carousel>
+      </Modal>
+          <Image src={test} onClick={open}/>
           <Image src={test} />
           <Image src={test} />
           <Image src={test} />
@@ -157,7 +173,7 @@ const AboutMe = () => {
           <Image src={test} />
         </SimpleGrid>
       </Container> */}
-    </>
+    </Box>
   );
 };
 

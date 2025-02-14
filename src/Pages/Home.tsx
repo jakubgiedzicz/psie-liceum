@@ -18,9 +18,14 @@ import styles from "./Home.module.css";
 import text_styles from "../styles/Text.module.css";
 import { Link } from "react-router-dom";
 import { IconArrowRight } from "@tabler/icons-react";
+import { useEffect } from "react";
 
 const Home = () => {
   const theme = useMantineTheme();
+  useEffect(() => {
+      window.scrollTo(0, 0);
+      document.title = "Psie Liceum"
+    }, []);
   return (
     <>
       <Container fluid p={0}>

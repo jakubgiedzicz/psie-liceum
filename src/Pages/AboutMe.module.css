@@ -5,6 +5,6 @@
 .paws_bg {
   background-image: url('../assets/prints.png');
   background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 35%;
+  background-position: bottom right;
+  background-size: 10%;
 }
