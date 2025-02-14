@@ -14,20 +14,20 @@ import Consult from "../Pages/Consult";
 
 export const Router = createBrowserRouter([
   {
-    path: '/',
+    path: '/psie-liceum/',
     element: <App />,
     children: [
-      { path: '', element: <Home />},
-      { path: 'o-mnie', element: <AboutMe />},
-      { path: 'konsultacje', element: <Consult />},
-      { path: 'konsultacje-behawioralne', element: <Behavioral />},
-      { path: 'konsultacje-dietetyczne', element: <Diet />},
-      { path: 'zajecia-grupowe', element: <Group />},
-      { path: 'psieprzedszkole', element: <Psieprzedszkole />},
-      { path: 'psiapodstawowka', element: <Psiapodstawowka />},
-      { path: 'cennik', element: <Prices />},
-      { path: 'kontakt', element: <Contact />},
-      { path: 'blog', element: <Blog />},
+      { path: '/psie-liceum/', element: <Home />},
+      { path: '/psie-liceum/o-mnie', element: <AboutMe />},
+      { path: '/psie-liceum/konsultacje', element: <Consult />},
+      { path: '/psie-liceum/konsultacje-behawioralne', element: <Behavioral />},
+      { path: '/psie-liceum/konsultacje-dietetyczne', element: <Diet />},
+      { path: '/psie-liceum/zajecia-grupowe', element: <Group />},
+      { path: '/psie-liceum/psieprzedszkole', element: <Psieprzedszkole />},
+      { path: '/psie-liceum/psiapodstawowka', element: <Psiapodstawowka />},
+      { path: '/psie-liceum/cennik', element: <Prices />},
+      { path: '/psie-liceum/kontakt', element: <Contact />},
+      { path: '/psie-liceum/blog', element: <Blog />},
     ]
   }
 ])
