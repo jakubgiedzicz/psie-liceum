@@ -4,10 +4,8 @@ import {
   Text,
   Group,
   Image,
-  NavLink,
   List,
   Grid,
-  Container,
 } from "@mantine/core";
 import text_style from "../styles/Text.module.css";
 import img from "../assets/beautiful-adorable-little-puppy-cute-600nw-2360693945.webp";
