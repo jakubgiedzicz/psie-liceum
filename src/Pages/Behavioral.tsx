@@ -9,6 +9,7 @@ import {
 } from "@mantine/core";
 import img from "../assets/beautiful-adorable-little-puppy-cute-600nw-2360693945.webp";
 const Behavioral = () => {
+  // @ts-ignore
   const theme = useMantineTheme();
   return (
     <>

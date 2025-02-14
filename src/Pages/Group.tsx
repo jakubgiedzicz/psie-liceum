@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-const Group = (props: Props) => {
+const Group = () => {
   return (
     <div>Group</div>
   )

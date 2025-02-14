@@ -5,7 +5,6 @@ import {
   Center,
   Container,
   Divider,
-  Grid,
   Image,
   List,
   SimpleGrid,

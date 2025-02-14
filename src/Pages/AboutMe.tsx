@@ -1,10 +1,4 @@
 import {
-  BackgroundImage,
-  Box,
-  Center,
-  Container,
-  Divider,
-  Group,
   Image,
   SimpleGrid,
   Stack,
@@ -16,13 +10,11 @@ import about_me_img from "../assets/about_me_avatar.jpg";
 import text_styles from "../styles/Text.module.css";
 import test from "../assets/certificate-text-samples.jpg";
 import { useLayoutEffect } from "react";
-import styles from "./AboutMe.module.css";
-import paws from "../assets/prints.png";
 const AboutMe = () => {
   const theme = useMantineTheme();
-  // useLayoutEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <SimpleGrid mx={"15%"}

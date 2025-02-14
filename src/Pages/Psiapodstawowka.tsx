@@ -19,10 +19,7 @@ import {
   IconHandStop,
   IconPaw,
 } from "@tabler/icons-react";
-
-type Props = {};
-
-const Psiapodstawowka = (props: Props) => {
+const Psiapodstawowka = () => {
   const theme = useMantineTheme();
   return (
     <>

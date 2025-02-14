@@ -20,6 +20,7 @@ import { useEffect } from "react";
 function App() {
   const [openedBurger, handlersBurger] = useDisclosure();
   const [openedDesktop, handlersDesktop] = useDisclosure(true);
+  // @ts-ignore
   const { height, width } = useViewportSize();
   const [menu, handlersMenu] = useDisclosure(true)
   const links = (mobile: boolean, desktop:boolean) => {

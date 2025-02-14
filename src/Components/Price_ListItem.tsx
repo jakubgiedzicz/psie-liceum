@@ -1,5 +1,4 @@
 import { List, Stack, Title, Text } from "@mantine/core";
-import React from "react";
 
 type Props = {
   title: string;

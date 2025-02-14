@@ -1,8 +1,5 @@
 import {
-  Box,
-  Center,
   Container,
-  Divider,
   List,
   Stack,
   Text,
