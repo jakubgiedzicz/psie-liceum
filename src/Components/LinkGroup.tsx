@@ -33,7 +33,6 @@ const links = [
   },
   { link: "/cennik", label: "Cennik" },
   { link: "/kontakt", label: "Kontakt" },
-  { link: "/blog", label: "Blog" },
 ];
 const links2 = [
   { link: "/o-mnie", label: "O mnie" },
@@ -43,7 +42,6 @@ const links2 = [
       { link: "/psiapodstawowka", label: "Psiapodstawówka" },
   { link: "/cennik", label: "Cennik" },
   { link: "/kontakt", label: "Kontakt" },
-  { link: "/blog", label: "Blog" },
 ];
 const LinkGroup = (props: Props) => {
   var items:ReactElement[]

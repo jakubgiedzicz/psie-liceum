@@ -3,7 +3,6 @@ import App from "../App";
 import Home from "../Pages/Home";
 import AboutMe from "../Pages/AboutMe";
 import Contact from "../Pages/Contact";
-import Blog from "../Pages/Blog";
 import Prices from "../Pages/Prices";
 import Behavioral from "../Pages/Behavioral";
 import Diet from "../Pages/Diet";
@@ -27,7 +26,6 @@ export const Router = createHashRouter([
       { path: 'psiapodstawowka', element: <Psiapodstawowka />},
       { path: 'cennik', element: <Prices />},
       { path: 'kontakt', element: <Contact />},
-      { path: 'blog', element: <Blog />},
     ]
   }
 ])

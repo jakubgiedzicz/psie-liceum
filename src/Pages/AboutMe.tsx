@@ -58,7 +58,6 @@ const AboutMe = () => {
           src={about_me_img}
           radius={"5%"}
           h={400}
-          className={styles.paws_bg}
         />
       </SimpleGrid>
       <Stack mt={64}>
