@@ -64,8 +64,10 @@ const Behavioral = () => {
               zbudować lepszą relację i stworzyć codzienność pełną harmonii.
             </Text>
           </Stack>
+          <Box mih={350} miw={250} className={styles.card_left_bg}/>
         </Card>
-        <Card pt={200} className={styles.grid_left}>
+        <Card className={styles.grid_left}>
+          <Box mih={250} miw={250} className={styles.card_right_bg}/>
           <Card.Section m={16}>
           <Image src={img} className={styles.container} radius={"8% 0"} />
           </Card.Section>
