@@ -55,7 +55,7 @@ function App() {
           collapsed: { mobile: !openedBurger, desktop: openedDesktop },
         }}
       >
-        <AppShell.Header>
+        <AppShell.Header w={'100dvw'}>
           <Group justify="space-around" h={"100%"}>
             <Link to={"/"}>
               <Image src={Logo} w={175} />
@@ -74,7 +74,7 @@ function App() {
         >
           {links(false, menu)}
         </AppShell.Navbar>
-        <AppShell.Main>
+        <AppShell.Main w={'100dvw'}>
           <Outlet />
         </AppShell.Main>
       </AppShell>

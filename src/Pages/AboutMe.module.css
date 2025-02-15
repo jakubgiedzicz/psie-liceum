@@ -1,10 +1,9 @@
-.bg {
-  background-color: black;
-  transform: translate(100px, 100px);
-}
 .paws_bg {
   background-image: url('../assets/prints.png');
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: 99% 100%;
   background-size: 10%;
+}
+.pointer {
+  cursor: pointer;
 }

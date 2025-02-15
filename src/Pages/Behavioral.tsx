@@ -1,4 +1,6 @@
 import {
+  Box,
+  Center,
   Image,
   List,
   SimpleGrid,
@@ -8,20 +10,24 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import img from "../assets/beautiful-adorable-little-puppy-cute-600nw-2360693945.webp";
+import styles from './Behavioral.module.css'
 const Behavioral = () => {
   // @ts-ignore
   const theme = useMantineTheme();
   return (
     <>
-      <Title order={3} fw={300} size={"xl"} my={16}>
+    <Box px={'20%'}>
+      <Title order={3} fw={300} size={"xl"}>
         Przystawka:{" "}
         <Text span fw={400} size="xl">
           Konsultacja indywidualna
         </Text>{" "}
         - "Pogadajmy o psiej duszy"
       </Title>
-      <SimpleGrid cols={{ base: 1, md: 2 }}>
-        <Image src={img} radius={"10% 10%"} />
+      <SimpleGrid cols={{ base: 1, md: 2 }} className={styles.grid_border}>
+        <Center>
+        <Image src={img} className={styles.container} radius={'0 8%'}/>
+        </Center>
         <Stack px={32} ta={"left"} justify="center">
           <Text>
             Każdy pies ma swoją historię, a ja jestem tu, by ją zrozumieć.
@@ -51,7 +57,7 @@ const Behavioral = () => {
           </Text>
         </Stack>
       </SimpleGrid>
-      <Title order={3} fw={300} size={"xl"} my={16}>
+      <Title order={3} fw={300} size={"xl"}>
         Przystawka dla najmłodszych:{" "}
         <Text span fw={400} size="xl">
           Konsultacja indywidualna szczeniaka
@@ -92,7 +98,9 @@ const Behavioral = () => {
             bezpieczny i szczęśliwy start w nowym domu.
           </Text>
         </Stack>
-        <Image src={img} radius={"10% 10%"} />
+        <Center>
+        <Image src={img} className={styles.container} radius={'8% 0'}/>
+        </Center>
       </SimpleGrid>
       <Title order={3} fw={300} size={"xl"} my={16}>
         Danie główne:{" "}
@@ -138,36 +146,41 @@ const Behavioral = () => {
         <Image src={img} radius={"10% 10%"} />
       </SimpleGrid>
       <Title order={3} fw={300} size={"xl"} my={16}>
-      Specjał szefa kuchni:{" "}
+        Specjał szefa kuchni:{" "}
         <Text span fw={400} size="xl">
-        Pakiet zajęć indywidualnych
+          Pakiet zajęć indywidualnych
         </Text>{" "}
         - "Marzenia na czterech łapach"
       </Title>
       <SimpleGrid cols={{ base: 1, md: 2 }}>
         <Stack px={32} ta={"left"} justify="center">
           <Text>
-          Chcesz widzieć trwałe efekty i zbudować z psem relację, która przetrwa wszystko? Pakiet zajęć indywidualnych to możliwość pracy w dłuższej perspektywie – więcej czasu, więcej nauki, więcej sukcesów! 
+            Chcesz widzieć trwałe efekty i zbudować z psem relację, która
+            przetrwa wszystko? Pakiet zajęć indywidualnych to możliwość pracy w
+            dłuższej perspektywie – więcej czasu, więcej nauki, więcej sukcesów!
           </Text>
           <Text fw={500}>W menu znajdziesz:</Text>
           <List>
             <List.Item>
-            Kompleksowy plan szkoleniowy dostosowany do potrzeb twojego psa. 
+              Kompleksowy plan szkoleniowy dostosowany do potrzeb twojego psa.
             </List.Item>
             <List.Item>
-            Regularną pracę nad posłuszeństwem, zachowaniem i budowaniem pewności siebie psa. 
+              Regularną pracę nad posłuszeństwem, zachowaniem i budowaniem
+              pewności siebie psa.
             </List.Item>
             <List.Item>
-            Indywidualne wsparcie i wskazówki na każdym etapie. 
+              Indywidualne wsparcie i wskazówki na każdym etapie.
             </List.Item>
           </List>
           <Text fw={500}>Dla kogo?</Text>
           <Text>
-          Dla tych, którzy wierzą, że ich pies zasługuje na najlepsze życie i są gotowi na systematyczną pracę.
+            Dla tych, którzy wierzą, że ich pies zasługuje na najlepsze życie i
+            są gotowi na systematyczną pracę.
           </Text>
         </Stack>
         <Image src={img} radius={"10% 10%"} />
       </SimpleGrid>
+      </Box>
     </>
   );
 };
