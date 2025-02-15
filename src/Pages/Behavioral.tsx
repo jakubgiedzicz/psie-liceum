@@ -23,9 +23,9 @@ const Behavioral = () => {
   }, []);
   return (
     <>
-      <Box px={"15%"}>
-      <SimpleGrid cols={{ base: 1, lg: 2 }} mt={32} spacing={64}>
-        <Card>
+      <Box px={"15%"} className="paws_bg">
+      <SimpleGrid cols={{ base: 1, lg: 2 }} mt={32} spacing={0} className={styles.grid_border} pb={16}>
+        <Card className={styles.grid_right}>
         <Title order={3} fw={300} size={"xl"} mt={24} mb={16}>
           Przystawka:{" "}
           <Text span fw={400} size="xl">
@@ -65,7 +65,7 @@ const Behavioral = () => {
             </Text>
           </Stack>
         </Card>
-        <Card mt={400}>
+        <Card pt={200} className={styles.grid_left}>
           <Card.Section m={16}>
           <Image src={img} className={styles.container} radius={"8% 0"} />
           </Card.Section>

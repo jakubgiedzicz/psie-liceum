@@ -19,7 +19,7 @@ const Contact = () => {
   const theme = useMantineTheme();
   return (
     <>
-      <Stack>
+      <Stack className="paws_bg">
         <Title
           order={1}
           c={theme.colors.yellow[6]}

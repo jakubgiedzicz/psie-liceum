@@ -5,3 +5,9 @@
   width: 100%;
   overflow-x: hidden;
 }
+.paws_bg {
+  background-image: url('/src/assets/prints.png');
+  background-repeat: no-repeat;
+  background-position: 99% 100%;
+  background-size: 10%;
+}

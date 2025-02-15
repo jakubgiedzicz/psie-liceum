@@ -25,7 +25,7 @@ const AboutMe = () => {
     document.title = "Psie Liceum - O mnie";
   }, []);
   return (
-    <Box className={styles.paws_bg}>
+    <Box className={'paws_bg'}>
       <SimpleGrid mx={"15%"} cols={{ base: 1, md: 2 }} mt={32}>
         <Stack justify="center">
           <Title

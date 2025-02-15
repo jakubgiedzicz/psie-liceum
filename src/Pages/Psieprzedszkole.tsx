@@ -1,11 +1,11 @@
-import { Group, Text, Title, useMantineTheme, Image, List, Grid, Center } from "@mantine/core";
+import { Group, Text, Title, useMantineTheme, Image, List, Grid, Center, Box } from "@mantine/core";
 import text_style from "../styles/Text.module.css";
 import img from "../assets/beautiful-adorable-little-puppy-cute-600nw-2360693945.webp";
 import { IconBone, IconCirclesRelation, IconDog, IconHandStop, IconPaw } from "@tabler/icons-react";
 const Psieprzedszkole = () => {
   const theme = useMantineTheme();
   return (
-    <>
+    <Box className="paws_bg" px={'15%'}>
       <Title
         order={1}
         c={theme.colors.yellow[7]}
@@ -68,7 +68,7 @@ const Psieprzedszkole = () => {
       </Grid.Col>
     </Grid>
     <Title order={2} fw={300} my={16}>Kurs odbywa się w małych grupach, co zapewnia indywidualne podejście do każdego psiaka, a jednocześnie pozwala szczeniakom rozwijać umiejętności w towarzystwie rówieśników. Wszystko to w przyjaznej atmosferze, pełnej zabawy i… smakołyków!</Title>
-    </>
+    </Box>
   );
 };
 

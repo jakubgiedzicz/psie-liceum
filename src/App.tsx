@@ -70,7 +70,7 @@ function App() {
           </Group>
         </AppShell.Header>
         <AppShell.Navbar
-          className={openedBurger ? styles.navbar_shadow : ""}
+          className={openedBurger ? styles.navbar_shadow + styles.paws_bg : styles.paws_bg}
         >
           {links(false, menu)}
         </AppShell.Navbar>

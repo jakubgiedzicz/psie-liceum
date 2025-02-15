@@ -6,6 +6,7 @@ import {
   Image,
   List,
   Grid,
+  Box,
 } from "@mantine/core";
 import text_style from "../styles/Text.module.css";
 import img from "../assets/beautiful-adorable-little-puppy-cute-600nw-2360693945.webp";
@@ -20,7 +21,7 @@ import {
 const Psiapodstawowka = () => {
   const theme = useMantineTheme();
   return (
-    <>
+    <Box className="paws_bg" px={'15%'}>
       <Title
         order={1}
         c={theme.colors.yellow[7]}
@@ -121,7 +122,7 @@ const Psiapodstawowka = () => {
         </Text>
       </Grid.Col>
     </Grid>
-    </>
+    </Box>
   );
 };
 

@@ -1,5 +1,4 @@
 import {
-  Container,
   List,
   Stack,
   Text,
@@ -13,8 +12,8 @@ const Prices = () => {
   const theme = useMantineTheme();
   return (
     <>
-      <Container>
-        <Stack mih={650} pt={32}>
+      <Stack className="paws_bg" px={'10%'}>
+        <Stack pt={32}>
           <Title
             order={1}
             mt={16}
@@ -111,7 +110,7 @@ const Prices = () => {
           </Text>
           <Text fs='italic' size="lg" fw={400} c={theme.colors.gray[8]} my={16}>"Nie tylko uczymy psy - uczymy ludzi, jak je kochać jeszcze bardziej."</Text>
         </Stack>
-      </Container>
+      </Stack>
     </>
   );
 };
