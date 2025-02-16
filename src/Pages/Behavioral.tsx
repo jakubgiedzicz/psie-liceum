@@ -10,6 +10,7 @@ import {
   Text,
   Title,
   useMantineTheme,
+  useMatches,
 } from "@mantine/core";
 import img from "../assets/beautiful-adorable-little-puppy-cute-600nw-2360693945.webp";
 import styles from "./Behavioral.module.css";
@@ -17,6 +18,14 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 const Behavioral = () => {
   const theme = useMantineTheme();
+  const borderLeft = useMatches({
+    base: styles.grid_full,
+    lg: styles.grid_left
+  })
+  const borderRight = useMatches({
+    base: styles.grid_full,
+    lg: styles.grid_right
+  })
   useEffect(() => {
     // window.scrollTo(0, 0);
     document.title = "Psie Liceum - Konsultacje behawioralne";
@@ -24,96 +33,98 @@ const Behavioral = () => {
   return (
     <>
       <Box px={"15%"} className="paws_bg">
-      <SimpleGrid cols={{ base: 1, lg: 2 }} mt={32} spacing={0} className={styles.grid_border} pb={16}>
-        <Card className={styles.grid_right}>
-        <Title order={3} fw={300} size={"xl"} mt={24} mb={16}>
-          Przystawka:{" "}
-          <Text span fw={400} size="xl">
-            Konsultacja indywidualna
-          </Text>{" "}
-          - "Pogadajmy o psiej duszy"
-        </Title>
-          <Card.Section m={16}>
-        <Image src={img} className={styles.container} radius={"0 8%"} />
-          </Card.Section>
-        <Stack px={32} ta={"left"} justify="center">
-            <Text c={theme.colors.gray[8]}>
-              Każdy pies ma swoją historię, a ja jestem tu, by ją zrozumieć.
-              Podczas tej konsultacji porozmawiamy o wszystkim, co was trapi -
-              od problemów z zachowaniem po pytania o codzienne życie. Razem
-              znajdziemy rozwiązania, które przyniosą ulgę zarówno tobie, jak i
-              twojemu psu.
-            </Text>
-            <Text fw={500}>W menu znajdziesz:</Text>
-            <List>
-              <List.Item>
-                Rozpoznania problemu i dokładnej analizy zachowania twojego psa.
-              </List.Item>
-              <List.Item>
-                Prostych, a jednocześnie skutecznych wskazówek, które będziesz
-                mógł wdrożyć od razu po naszej konsultacji.
-              </List.Item>
-              <List.Item>
-                Zrozumienia emocji twojego psa - bo każde zachowanie ma swoją
-                przyczynę.
-              </List.Item>
-            </List>
-            <Text fw={500}>Dla kogo?</Text>
-            <Text>
-              Dla właścicieli, którzy chcą znaleźć rozwiązanie dla swojego psa,
-              zbudować lepszą relację i stworzyć codzienność pełną harmonii.
-            </Text>
-          </Stack>
-          <Box mih={350} miw={250} className={styles.card_left_bg}/>
-        </Card>
-        <Card className={styles.grid_left}>
-          <Box mih={250} miw={250} className={styles.card_right_bg}/>
-          <Card.Section m={16}>
-          <Image src={img} className={styles.container} radius={"8% 0"} />
-          </Card.Section>
-          <Title order={3} fw={300} size={"xl"} mt={24} mb={16}>
-          Przystawka dla najmłodszych:{" "}
-          <Text span fw={400} size="xl">
-            Konsultacja indywidualna szczeniaka
-          </Text>{" "}
-          - "Szczenięce ABC"
-        </Title>
-        <Stack px={32} ta={"left"} justify="center">
-            <Text c={theme.colors.gray[8]}>
-              Twój maluch dopiero poznaje świat, a ty chcesz być pewny, że
-              dajesz mu najlepszy start? Konsultacja indywidualna szczeniaka to
-              wasz pierwszy krok w stronę harmonii, bezpieczeństwa i dobrych
-              nawyków od samego początku.
-            </Text>
-            <Text fw={500}>W menu znajdziesz:</Text>
-            <List>
-              <List.Item>
-                Podpowiedzi, jak wprowadzić szczeniaka do nowego domu - od
-                pierwszego dnia po dalsze tygodnie.
-              </List.Item>
-              <List.Item>
-                Rozwiązania na typowe problemy młodych psiaków: gryzienie,
-                załatwianie się w domu, nadmierna ekscytacja.
-              </List.Item>
-              <List.Item>
-                Mini-szkolenie z podstawowych zasad: jak prawidłowo bawić się z
-                psem, budować więź i wprowadzać pierwsze komendy ('siad',
-                'zostań').
-              </List.Item>
-              <List.Item>
-                Wskazówki dotyczące socjalizacji i przyzwyczajania szczeniaka do
-                nowych dźwięków, ludzi i miejsc.
-              </List.Item>
-            </List>
-            <Text fw={500}>Dla kogo?</Text>
-            <Text>
-              Dla właścicieli szczeniąt, którzy chcą dać swojemu maluchowi
-              bezpieczny i szczęśliwy start w nowym domu.
-            </Text>
-          </Stack>
-        </Card>
-      </SimpleGrid>
-      <Title order={3} fw={300} size={"xl"} my={16}>
+        <SimpleGrid
+          cols={{ base: 1, lg: 2 }}
+          mt={32}
+          spacing={0}
+          pb={16}
+        >
+          <Card className={borderLeft}>
+            <Title order={3} fw={300} size={"xl"} mt={24} mb={16}>
+              Przystawka:{" "}
+              <Text span fw={400} size="xl">
+                Konsultacja indywidualna
+              </Text>{" "}
+              - "Pogadajmy o psiej duszy"
+            </Title>
+            <Stack px={32} ta={"left"} justify="center">
+              <Text c={theme.colors.gray[8]}>
+                Każdy pies ma swoją historię, a ja jestem tu, by ją zrozumieć.
+                Podczas tej konsultacji porozmawiamy o wszystkim, co was trapi -
+                od problemów z zachowaniem po pytania o codzienne życie. Razem
+                znajdziemy rozwiązania, które przyniosą ulgę zarówno tobie, jak
+                i twojemu psu.
+              </Text>
+              <Text fw={500}>W menu znajdziesz:</Text>
+              <List>
+                <List.Item>
+                  Rozpoznania problemu i dokładnej analizy zachowania twojego
+                  psa.
+                </List.Item>
+                <List.Item>
+                  Prostych, a jednocześnie skutecznych wskazówek, które będziesz
+                  mógł wdrożyć od razu po naszej konsultacji.
+                </List.Item>
+                <List.Item>
+                  Zrozumienia emocji twojego psa - bo każde zachowanie ma swoją
+                  przyczynę.
+                </List.Item>
+              </List>
+              <Text fw={500}>Dla kogo?</Text>
+              <Text>
+                Dla właścicieli, którzy chcą znaleźć rozwiązanie dla swojego
+                psa, zbudować lepszą relację i stworzyć codzienność pełną
+                harmonii.
+              </Text>
+            </Stack>
+            <Box mih={350} miw={250} className={styles.card_left_bg} />
+          </Card>
+          <Card className={borderRight}>
+            <Box mih={250} miw={250} className={styles.card_right_bg} visibleFrom="lg"/>
+            <Title order={3} fw={300} size={"xl"} mt={24} mb={16}>
+              Przystawka dla najmłodszych:{" "}
+              <Text span fw={400} size="xl">
+                Konsultacja indywidualna szczeniaka
+              </Text>{" "}
+              - "Szczenięce ABC"
+            </Title>
+            <Stack px={32} ta={"left"} justify="center">
+              <Text c={theme.colors.gray[8]}>
+                Twój maluch dopiero poznaje świat, a ty chcesz być pewny, że
+                dajesz mu najlepszy start? Konsultacja indywidualna szczeniaka
+                to wasz pierwszy krok w stronę harmonii, bezpieczeństwa i
+                dobrych nawyków od samego początku.
+              </Text>
+              <Text fw={500}>W menu znajdziesz:</Text>
+              <List>
+                <List.Item>
+                  Podpowiedzi, jak wprowadzić szczeniaka do nowego domu - od
+                  pierwszego dnia po dalsze tygodnie.
+                </List.Item>
+                <List.Item>
+                  Rozwiązania na typowe problemy młodych psiaków: gryzienie,
+                  załatwianie się w domu, nadmierna ekscytacja.
+                </List.Item>
+                <List.Item>
+                  Mini-szkolenie z podstawowych zasad: jak prawidłowo bawić się
+                  z psem, budować więź i wprowadzać pierwsze komendy ('siad',
+                  'zostań').
+                </List.Item>
+                <List.Item>
+                  Wskazówki dotyczące socjalizacji i przyzwyczajania szczeniaka
+                  do nowych dźwięków, ludzi i miejsc.
+                </List.Item>
+              </List>
+              <Text fw={500}>Dla kogo?</Text>
+              <Text>
+                Dla właścicieli szczeniąt, którzy chcą dać swojemu maluchowi
+                bezpieczny i szczęśliwy start w nowym domu.
+              </Text>
+            </Stack>
+            <Box mih={250} miw={250} className={styles.card_right_bg} hiddenFrom="lg"/>
+          </Card>
+        </SimpleGrid>
+        <Title order={3} fw={300} size={"xl"} my={16}>
           Danie główne:{" "}
           <Text span fw={400} size="xl">
             Zajęcia indywidualne
@@ -122,7 +133,6 @@ const Behavioral = () => {
         </Title>
         <SimpleGrid
           cols={{ base: 1, lg: 2 }}
-          className={styles.grid_border}
           pb={24}
         >
           <Stack px={32} ta={"left"} justify="center">
@@ -159,7 +169,7 @@ const Behavioral = () => {
             </Text>
           </Stack>
           <Center>
-          <Image src={img} radius={"10% 10%"} />
+            <Image src={img} radius={"10% 10%"} />
           </Center>
         </SimpleGrid>
         <Title order={3} fw={300} size={"xl"} my={16}>
@@ -169,9 +179,9 @@ const Behavioral = () => {
           </Text>{" "}
           - "Marzenia na czterech łapach"
         </Title>
-        <SimpleGrid cols={{ base: 1, md: 2 }} pb={24}>
-          <Center>
-          <Image src={img} radius={"10% 10%"} />
+        <SimpleGrid cols={{ base: 1, lg: 2 }} pb={24}>
+          <Center visibleFrom="lg">
+            <Image src={img} radius={"10% 10%"} />
           </Center>
           <Stack px={32} ta={"left"} justify="center">
             <Text c={theme.colors.gray[8]}>
@@ -201,12 +211,7 @@ const Behavioral = () => {
           </Stack>
         </SimpleGrid>
         <Center my={16}>
-          <Button
-            component={Link}
-            to={"/cennik"}
-            variant="outline"
-            size="md"
-          >
+          <Button component={Link} to={"/cennik"} variant="outline" size="md">
             Sprawdź ceny
           </Button>
         </Center>

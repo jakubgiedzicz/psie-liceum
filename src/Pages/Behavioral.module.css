@@ -6,11 +6,16 @@ box-shadow: 0px 0px 25px -10px rgba(66, 68, 90, 1);
 .grid_border {
  border-bottom: 1px solid rgba(128, 128, 128, 0.25);
 }
-.grid_right {
+.grid_left {
   border-right: 1px solid rgba(128, 128, 128, 0.25);
 }
-.grid_left {
+.grid_right {
   border-left: 1px solid rgba(128, 128, 128, 0.25);
+}
+.grid_full {
+  border-right: 1px solid rgba(128, 128, 128, 0.25);
+  border-left: 1px solid rgba(128, 128, 128, 0.25);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.25);
 }
 .shadow {
   text-shadow: 0px 0px 10px black;
@@ -19,11 +24,11 @@ box-shadow: 0px 0px 25px -10px rgba(66, 68, 90, 1);
   background-image: url('/src/assets/woman_walking_dog.jpeg');
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: contain;
 }
 .card_right_bg {
   background-image: url('/src/assets/dog_high_five.jpg');
-  background-position: top;
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: contain;
+  background-position: top;
 }
