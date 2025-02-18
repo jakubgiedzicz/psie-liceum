@@ -23,9 +23,9 @@ import { useEffect } from "react";
 const Home = () => {
   const theme = useMantineTheme();
   useEffect(() => {
-      window.scrollTo(0, 0);
-      document.title = "Psie Liceum"
-    }, []);
+    // window.scrollTo(0, 0);
+    document.title = "Psie Liceum";
+  }, []);
   return (
     <>
       <Container fluid p={0}>
@@ -96,13 +96,18 @@ const Home = () => {
               Czym się zajmuję
             </Title>
             <Text mt={16} fw={400} size="lg" ta="left">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-              itaque dolore placeat temporibus! Facere deleniti soluta vitae
-              dolore, voluptatibus reprehenderit repellendus sint vel sed
-              asperiores repudiandae accusamus alias, enim fuga ullam quod
-              similique officia ducimus reiciendis perferendis tenetur
-              voluptates ut? Nam illo molestiae porro, voluptatem mollitia quam
-              beatae odio quisquam.
+              Cześć, jestem Weronika - trenerka psów z sercem pełnym pasji i
+              domem pełnym miłości do zwierząt. Mieszkam z rottweilerką Lily,
+              mopsami Shrekiem i Fioną oraz kotem Pusiaką, który zarządza naszym
+              światem jak prawdziwy boss.
+            </Text>
+            <Text fw={400} size="lg" ta="left">
+              Każdego dnia pomagam opiekunom odkrywać, jak wyjątkowe mogą być
+              relacje z ich czworonogami. Uczę, jak zrozumieć psa, budować
+              zaufanie i wspólnie cieszyć się codziennością. Specjalizuję się w
+              rozwiązywaniu problemów behawioralnych, nauce nowych umiejętności
+              i tworzeniu planów treningowych oraz diet, które są dopasowane do
+              potrzeb każdego psa.
             </Text>
           </Stack>
           <Center>
@@ -129,75 +134,109 @@ const Home = () => {
           W czym mogę pomóc
         </Title>
         <Title order={2} fw={400}>
-          Gwarantuję Ci humanitarne metody szkolenia psów, które zadowolą psy
-          jak i właścicieli!
+          Stosuję wyłącznie przyjazne i skuteczne metody szkolenia, które
+          sprawiają, że psy merdają ogonami, a właściciele uśmiechają się od
+          ucha do ucha!
         </Title>
-        <SimpleGrid mx={64} my={32} cols={{ base: 1, sm: 2, md: 3 }} spacing={{ base: 10, sm: 'xl' }}>
+        <SimpleGrid
+          mx={64}
+          my={32}
+          cols={{ base: 1, sm: 2, md: 3 }}
+          spacing={{ base: 10, sm: "xl" }}
+        >
           <Stack p={16}>
-            <Button component={Link} to='/konsultacje-behawioralne' variant="subtle" mih={72} color={theme.colors.yellow[6]}>
-            <Title order={2} fw={500} textWrap="wrap">
-              Konsultacje indywidualne
-            </Title>
+            <Button
+              component={Link}
+              to="/konsultacje-behawioralne"
+              variant="subtle"
+              mih={72}
+              color={theme.colors.yellow[6]}
+            >
+              <Title order={2} fw={500} textWrap="wrap">
+                Konsultacje indywidualne
+              </Title>
             </Button>
             <List ta={"left"}>
+              <List.Item>Omówienie problemów i oczekiwań właściciela</List.Item>
               <List.Item>
-              Analiza zachowań psa oraz rozpoznanie problemów
-              </List.Item>
-              <List.Item>Nauka posłuszeństwa oraz prawidłowych wzorców</List.Item>
-              <List.Item>
-                Nauka kontroli emocji i podstawowych komend
+                Dopasowanie planu do indywidualnych potrzeb psa i właściciela
               </List.Item>
               <List.Item>
-              Wskazówki dla właścicieli skąd wynikają pewne zachowania zwierzaka
+                Wprowadzenie ćwiczeń do pracy w domu i na spacerach
+              </List.Item>
+              <List.Item>Rozwiązania dla najpilniejszych problemów</List.Item>
+              <List.Item>
+                Przekazanie szczegółowego planu treningowego do dalszej pracy
+              </List.Item>
+              <List.Item>
+                Wskazówki dotyczące codziennej rutyny i budowania relacji z psem
               </List.Item>
             </List>
           </Stack>
           <Stack p={16}>
-          <Button component={Link} to='/konsultacje-behawioralne' variant="subtle" mih={72} color={theme.colors.yellow[6]}>
-            <Title order={2} fw={500} textWrap="wrap">
-              Zajęcia grupowe
-            </Title>
+            <Button
+              component={Link}
+              to="/konsultacje-behawioralne"
+              variant="subtle"
+              mih={72}
+              color={theme.colors.yellow[6]}
+            >
+              <Title order={2} fw={500} textWrap="wrap">
+                Zajęcia grupowe
+              </Title>
             </Button>
             <List ta={"left"}>
               <List.Item>
-                Oswojenie oraz zaprzyjaźnienie ze światem zewnętrznym
-              </List.Item>
-              <List.Item>Socjalizacja i nauka samokontroli wśród innych psów</List.Item>
-              <List.Item>
-                Wypracowanie odpowiedniej komunikacji
+                Nauka podstawowych komend w obecności innych psów
               </List.Item>
               <List.Item>
-                Nauka zabaw i zachowań w grupie
+                Praca nad koncentracją psa w rozpraszającym środowisku
+              </List.Item>
+              <List.Item>Ćwiczenie spokojnego zachowania w grupie</List.Item>
+              <List.Item>
+                Nauka poprawnych zachowań w kontaktach z innymi psami
+              </List.Item>
+              <List.Item>
+                Ćwiczenia budujące zaufanie między psem a właścicielem w
+                obecności innych psów
+              </List.Item>
+              <List.Item>
+                Wskazówki do dalszej pracy w codziennych sytuacjach
               </List.Item>
             </List>
           </Stack>
           <Stack p={16}>
-          <Button component={Link} to='/konsultacje-behawioralne' variant="subtle" mih={72} color={theme.colors.yellow[6]}>
-            <Title order={2} fw={500} textWrap="wrap">
-              Konsultacje dietetyczne
-            </Title>
+            <Button
+              component={Link}
+              to="/konsultacje-behawioralne"
+              variant="subtle"
+              mih={72}
+              color={theme.colors.yellow[6]}
+            >
+              <Title order={2} fw={500} textWrap="wrap">
+                Dietetyka
+              </Title>
             </Button>
             <List ta={"left"}>
+              <List.Item>Szczegółowe omówienie stanu zdrowia psa</List.Item>
+              <List.Item>Pomoc w doborze odpowiedniej diety</List.Item>
               <List.Item>
-              Pomoc w doborze odpowiedniej diety
-              </List.Item>
-              <List.Item>Wypracowanie pozytywnych zachowań przy jedzeniu</List.Item>
-              <List.Item>
-                Poszerzenie horyzontów wybrednego psa
+                Wypracowanie pozytywnych zachowań przy jedzeniu
               </List.Item>
               <List.Item>
                 Praca w kierunku odzyskania prawidłowej masy ciała
+              </List.Item>
+              <List.Item>Poszerzenie horyzontów wybrednego psa</List.Item>
+              <List.Item>
+                Wskazówki dotyczące karmienia przed i po treningu
               </List.Item>
             </List>
           </Stack>
         </SimpleGrid>
       </Stack>
-      <BackgroundImage
-        src={img_about}
-        mih={400}
-        className={styles.parallax}
-      >
-        <Stack mih={400} justify="center" align="center">
+      <BackgroundImage src={img_about} mih={400} className={styles.parallax}>
+        <Stack mih={400} justify="space-around">
+          <Box />
           <Button
             variant="filled"
             size="xl"

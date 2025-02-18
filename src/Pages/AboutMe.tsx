@@ -13,19 +13,37 @@ import about_me_img from "../assets/about_me_avatar.jpg";
 import text_styles from "../styles/Text.module.css";
 import test from "../assets/certificate-text-samples.jpg";
 import styles from "../Pages/AboutMe.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "@mantine/carousel/styles.css";
-import { useDisclosure } from "@mantine/hooks";
 import { Carousel } from "@mantine/carousel";
 const AboutMe = () => {
-  const [opened, { open, close }] = useDisclosure(false);
+  const [opened, setOpened] = useState(false);
   const theme = useMantineTheme();
+  const [images, setImages] = useState([
+    {
+      id: 0,
+      img: test,
+    },
+    { id: 1, img: about_me_img },
+    { id: 2, img: test },
+    { id: 3, img: test },
+  ]);
+  const [index, setIndex] = useState(0)
+  const carouselItems = images.map((i) => (
+    <Carousel.Slide key={i.id}>
+      <Image src={i.img} />
+    </Carousel.Slide>
+  ));
+  const handleModalOpen = (id: number) => {
+    setIndex(id)
+    setOpened(true)
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Psie Liceum - O mnie";
   }, []);
   return (
-    <Box className={'paws_bg'}>
+    <Box className={"paws_bg"}>
       <SimpleGrid mx={"15%"} cols={{ base: 1, md: 2 }} mt={32}>
         <Stack justify="center">
           <Title
@@ -54,11 +72,7 @@ const AboutMe = () => {
             żywieniowej konsultacji czy w studiu tatuażu.
           </Text>
         </Stack>
-        <Image
-          src={about_me_img}
-          radius={"5%"}
-          h={400}
-        />
+        <Image src={about_me_img} radius={"5%"} h={400} />
       </SimpleGrid>
       <Stack mt={64}>
         <Text ta={"left"} c={theme.colors.gray[8]} px={"15%"}>
@@ -105,29 +119,18 @@ const AboutMe = () => {
           >
             <Modal
               opened={opened}
-              onClose={close}
+              onClose={() => setOpened(false)}
               title="Moje certyfikaty"
               centered
             >
-              <Carousel withIndicators loop>
-                <Carousel.Slide>
-                  <Image src={test} />
-                </Carousel.Slide>
-                <Carousel.Slide>
-                  <Image src={test} />
-                </Carousel.Slide>
-                <Carousel.Slide>
-                  <Image src={test} />
-                </Carousel.Slide>
-                <Carousel.Slide>
-                  <Image src={test} />
-                </Carousel.Slide>
+              <Carousel withIndicators loop initialSlide={index}>
+                {carouselItems}
               </Carousel>
             </Modal>
-            <Image src={test} onClick={open} className={styles.pointer} />
-            <Image src={test} />
-            <Image src={test} />
-            <Image src={test} />
+            <Image src={test} onClick={() => handleModalOpen(0)} className={styles.pointer} />
+            <Image src={about_me_img} onClick={() => handleModalOpen(1)} className={styles.pointer} />
+            <Image src={test} onClick={() => handleModalOpen(2)} className={styles.pointer}/>
+            <Image src={test} onClick={() => handleModalOpen(3)} className={styles.pointer}/>
           </SimpleGrid>
         </Center>
       </Stack>

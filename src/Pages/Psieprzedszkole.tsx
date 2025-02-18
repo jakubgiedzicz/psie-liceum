@@ -10,6 +10,7 @@ import {
   Box,
   SimpleGrid,
   Stack,
+  Accordion,
 } from "@mantine/core";
 import text_style from "../styles/Text.module.css";
 import img from "../assets/beautiful-adorable-little-puppy-cute-600nw-2360693945.webp";
@@ -19,13 +20,41 @@ import {
   IconDog,
   IconHandStop,
   IconPaw,
+  IconPlus,
 } from "@tabler/icons-react";
 import { useEffect } from "react";
+const data = [
+  {
+    value: "Socjalizacja",
+    description:
+      "Twój szczeniak pozna różne psy, nauczy się rozumieć ich mowę ciała i będzie czuł się pewnie w towarzystwie innych zwierząt",
+  },
+  {
+    value: "Oswajanie dźwięków i sytuacji",
+    description:
+      "Hałas, ruch uliczny, nowe miejsca - pokażemy, że świat nie jest taki straszny!",
+  },
+  {
+    value: "Zabawy rozwijające umysł",
+    description:
+      "Gry i łamigłówki, które pomogą rozwijać inteligencję szczeniaka",
+  },
+];
 const Psieprzedszkole = () => {
+  const items = data.map((i) => (
+    <Accordion.Item key={i.value} value={i.value}>
+      <Accordion.Control icon={<IconPlus size={32} />}>
+        <Text fw={500}>{i.value}</Text>
+      </Accordion.Control>
+      <Accordion.Panel>
+        <Text fw={400}>{i.description}</Text>
+      </Accordion.Panel>
+    </Accordion.Item>
+  ));
   useEffect(() => {
-      window.scrollTo(0, 0);
-      document.title = "Psie Liceum - Psieprzedszkole";
-    }, []);
+    // window.scrollTo(0, 0);
+    document.title = "Psie Liceum - Psieprzedszkole";
+  }, []);
   const theme = useMantineTheme();
   return (
     <Box className="paws_bg" px={"15%"}>
@@ -45,7 +74,7 @@ const Psieprzedszkole = () => {
       </Title>
       <SimpleGrid cols={{ base: 1, lg: 2 }} mt={32} spacing={32} pb={16}>
         <Center hiddenFrom="md">
-        <Image src={img} radius="10% 10%"  />
+          <Image src={img} radius="10% 10%" />
         </Center>
         <Stack>
           <Text c={theme.colors.gray[8]} my={16}>
@@ -59,7 +88,7 @@ const Psieprzedszkole = () => {
             <Text fw={300} size="xl">
               Podczas kursu twój szczeniak nauczy się:
             </Text>
-            <List my={16} ta="left" spacing={'md'}>
+            <List my={16} ta="left" spacing={"md"}>
               <List.Item icon={<IconDog size={64} />}>
                 <Text>
                   <Text span fw={500}>
@@ -110,7 +139,7 @@ const Psieprzedszkole = () => {
           </Stack>
         </Stack>
         <Center visibleFrom="md">
-        <Image src={img} radius="10% 10%"  />
+          <Image src={img} radius="10% 10%" />
         </Center>
       </SimpleGrid>
       <Title order={2} fw={400}>
@@ -125,28 +154,9 @@ const Psieprzedszkole = () => {
         </Text>{" "}
         to także:
       </Title>
-      <Grid mx="10%" my={32}>
-        <Grid.Col span={4}>
-          <Title order={3}>Socjalizacja</Title>
-          <Text>
-            Twój szczeniak pozna różne psy, nauczy się rozumieć ich mowę ciała i
-            będzie czuł się pewnie w towarzystwie innych zwierząt.
-          </Text>
-        </Grid.Col>
-        <Grid.Col span={4}>
-          <Title order={3}>Oswajanie dźwięków i sytuacji</Title>
-          <Text>
-            Hałas, ruch uliczny, nowe miejsca - pokażemy, że świat nie jest taki
-            straszny!
-          </Text>
-        </Grid.Col>
-        <Grid.Col span={4}>
-          <Title order={3}>Zabawy rozwijające umysł</Title>
-          <Text>
-            Gry i łamigłówki, które pomogą rozwijać inteligencję szczeniaka.
-          </Text>
-        </Grid.Col>
-      </Grid>
+      <Accordion px={"15%"} py={32} transitionDuration={200}>
+        {items}
+      </Accordion>
       <Title order={2} fw={300} my={16}>
         Kurs odbywa się w małych grupach, co zapewnia indywidualne podejście do
         każdego psiaka, a jednocześnie pozwala szczeniakom rozwijać umiejętności
