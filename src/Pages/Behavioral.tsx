@@ -32,6 +32,7 @@ const Behavioral = () => {
   }, []);
   return (
     <>
+    <Box bg={theme.colors.yellow[6]} w={'100%'} h={48}/>
       <Box px={"15%"} className="paws_bg">
         <SimpleGrid
           cols={{ base: 1, lg: 2 }}
@@ -124,7 +125,7 @@ const Behavioral = () => {
             <Box mih={250} miw={250} className={styles.card_right_bg} hiddenFrom="lg"/>
           </Card>
         </SimpleGrid>
-        <Title order={3} fw={300} size={"xl"} my={16}>
+        <Title order={3} fw={300} size={"xl"} mb={16} mt={32}>
           Danie główne:{" "}
           <Text span fw={400} size="xl">
             Zajęcia indywidualne
@@ -134,6 +135,7 @@ const Behavioral = () => {
         <SimpleGrid
           cols={{ base: 1, lg: 2 }}
           pb={24}
+          mb={32}
         >
           <Stack px={32} ta={"left"} justify="center">
             <Text c={theme.colors.gray[8]}>
