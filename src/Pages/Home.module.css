@@ -5,7 +5,7 @@
 }
 .parallax {
   background-attachment: fixed;
-  background-position: -20% -50%;
+  background-position: 50% 250px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -24,4 +24,9 @@
 }
 .text_secondary {
   color: var(--main-secondary-color);
+}
+@media (min-width: 1921px) {
+ .parallax {
+  background-position: 50% 300px;
+ }
 }

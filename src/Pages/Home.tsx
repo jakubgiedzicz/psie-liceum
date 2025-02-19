@@ -234,8 +234,8 @@ const Home = () => {
           </Stack>
         </SimpleGrid>
       </Stack>
-      <BackgroundImage src={img_about} mih={400} className={styles.parallax}>
-        <Stack mih={400} justify="space-around">
+      <BackgroundImage src={img_about} className={styles.parallax} h={400}>
+        <Stack justify="space-around">
           <Box />
           <Button
             variant="filled"

@@ -18,10 +18,13 @@ import classes from "./Components/LinkGroup.module.css";
 import { useEffect } from "react";
 
 function App() {
+  //is burger visible?
   const [openedBurger, handlersBurger] = useDisclosure();
+  //is width >992
   const [openedDesktop, handlersDesktop] = useDisclosure(true);
   // @ts-ignore
   const { height, width } = useViewportSize();
+  //is width 576<x<992
   const [menu, handlersMenu] = useDisclosure(true)
   const links = (mobile: boolean, desktop:boolean) => {
     if (mobile) {
@@ -70,7 +73,7 @@ function App() {
           </Group>
         </AppShell.Header>
         <AppShell.Navbar
-          className={openedBurger ? styles.navbar_shadow + styles.paws_bg : styles.paws_bg}
+          className={openedBurger ? styles.navbar_shadow + ' paws_bg' : ' paws_bg'}
         >
           {links(false, menu)}
         </AppShell.Navbar>
