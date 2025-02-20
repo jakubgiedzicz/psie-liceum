@@ -15,11 +15,17 @@ import LogoIg from "../assets/Instagram_Glyph_Gradient.svg";
 import LogoFb from "../assets/Facebook_Logo_Primary.png";
 import styles from "../Components/Footer.module.css";
 import map from "../styles/Map_embed.module.css";
+import { useEffect } from "react";
 const Contact = () => {
   const theme = useMantineTheme();
+  useEffect(() => {
+      window.scrollTo(0, 0);
+      document.title = "Psie Liceum - Kontakt";
+    }, []);
   return (
     <>
       <Stack className="paws_bg">
+        <Box px={'10%'}>
         <Title
           order={1}
           c={theme.colors.yellow[6]}
@@ -164,6 +170,7 @@ const Contact = () => {
             </a>
           </Group>
         </Group>
+        </Box>
       </Stack>
     </>
   );

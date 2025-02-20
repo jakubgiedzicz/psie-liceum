@@ -1,11 +1,9 @@
 import {
-  Group,
   Text,
   Title,
   useMantineTheme,
   Image,
   List,
-  Grid,
   Center,
   Box,
   SimpleGrid,
@@ -52,7 +50,7 @@ const Psieprzedszkole = () => {
     </Accordion.Item>
   ));
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     document.title = "Psie Liceum - Psieprzedszkole";
   }, []);
   const theme = useMantineTheme();
@@ -146,7 +144,7 @@ const Psieprzedszkole = () => {
         Ale to nie wszystko! Nasze{" "}
         <Text
           span
-          c={theme.colors.yellow[7]}
+          c={theme.colors.yellow[6]}
           className={text_style.title_shadow}
           inherit
         >

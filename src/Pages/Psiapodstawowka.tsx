@@ -2,7 +2,6 @@ import {
   Title,
   useMantineTheme,
   Text,
-  Group,
   Image,
   List,
   Grid,
@@ -21,7 +20,12 @@ import {
   IconHandStop,
   IconPaw,
 } from "@tabler/icons-react";
+import { useEffect } from "react";
 const Psiapodstawowka = () => {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+      document.title = "Psie Liceum - Psiapodstawówka";
+    }, []);
   const theme = useMantineTheme();
   return (
     <Box className="paws_bg" px={"15%"}>
@@ -110,14 +114,16 @@ const Psiapodstawowka = () => {
         <Image src={img} radius={"10% 10%"}/>
         </Center>
       </SimpleGrid>
-      <Title order={2} fw={400} my={16}>
+      <Stack bg={theme.colors.yellow[6]} pb={16}>
+      <Title order={2} fw={400} >
         Dlaczego w grupie?
       </Title>
-      <Text my={16}>
+      <Text >
         Twój pies nauczy się współpracować nawet w obecności innych psów i ludzi
         - bo prawdziwa grzeczność to umiejętność zachowania się w towarzystwie.
         A wszystko to w atmosferze przyjaznej zabawy i pozytywnych emocji!{" "}
       </Text>
+      </Stack>
       <Title order={2} fw={400} my={16}>
         Psiapodstawówka - dla kogo?
       </Title>

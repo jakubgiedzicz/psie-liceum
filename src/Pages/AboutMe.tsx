@@ -16,18 +16,18 @@ import styles from "../Pages/AboutMe.module.css";
 import { useEffect, useState } from "react";
 import "@mantine/carousel/styles.css";
 import { Carousel } from "@mantine/carousel";
+const images = [
+  {
+    id: 0,
+    img: test,
+  },
+  { id: 1, img: about_me_img },
+  { id: 2, img: test },
+  { id: 3, img: test },
+]
 const AboutMe = () => {
   const [opened, setOpened] = useState(false);
   const theme = useMantineTheme();
-  const [images, setImages] = useState([
-    {
-      id: 0,
-      img: test,
-    },
-    { id: 1, img: about_me_img },
-    { id: 2, img: test },
-    { id: 3, img: test },
-  ]);
   const [index, setIndex] = useState(0)
   const carouselItems = images.map((i) => (
     <Carousel.Slide key={i.id}>

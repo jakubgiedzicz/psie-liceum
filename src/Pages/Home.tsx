@@ -176,7 +176,7 @@ const Home = () => {
           <Stack p={16}>
             <Button
               component={Link}
-              to="/konsultacje-behawioralne"
+              to="/zajecia-grupowe"
               variant="subtle"
               mih={72}
               color={theme.colors.yellow[6]}
@@ -208,7 +208,7 @@ const Home = () => {
           <Stack p={16}>
             <Button
               component={Link}
-              to="/konsultacje-behawioralne"
+              to="/konsultacje-dietetyczne"
               variant="subtle"
               mih={72}
               color={theme.colors.yellow[6]}
