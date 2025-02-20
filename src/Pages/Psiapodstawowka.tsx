@@ -28,7 +28,7 @@ const Psiapodstawowka = () => {
     }, []);
   const theme = useMantineTheme();
   return (
-    <Box className="paws_bg" px={"15%"}>
+    <Box className="paws_bg">
       <Title
         order={1}
         c={theme.colors.yellow[6]}
@@ -43,7 +43,7 @@ const Psiapodstawowka = () => {
           (szczeniaki od 6 miesiąca życia)
         </Text>
       </Title>
-      <SimpleGrid cols={{ base: 1, lg: 2 }} mt={32} spacing={32} pb={16}>
+      <SimpleGrid cols={{ base: 1, lg: 2 }} mt={32} spacing={32} pb={16} px={'10%'}>
         <Center hiddenFrom="md">
           <Image src={img} radius="10% 10%" />
         </Center>
@@ -114,8 +114,8 @@ const Psiapodstawowka = () => {
         <Image src={img} radius={"10% 10%"}/>
         </Center>
       </SimpleGrid>
-      <Stack bg={theme.colors.yellow[6]} pb={16}>
-      <Title order={2} fw={400} >
+      <Stack bg={theme.colors.yellow[6]} pb={16} px={'15%'}>
+      <Title order={2} fw={400}>
         Dlaczego w grupie?
       </Title>
       <Text >
@@ -127,26 +127,20 @@ const Psiapodstawowka = () => {
       <Title order={2} fw={400} my={16}>
         Psiapodstawówka - dla kogo?
       </Title>
-      <Grid mx="10%" my={32}>
-        <Grid.Col span={4}>
+      <SimpleGrid mx="10%" my={32} cols={{ base: 1, sm: 3 }}>
           <Text>
             Dla psów od 6. miesiąca życia, które opanowały podstawy, ale chcą
             nauczyć się więcej.
           </Text>
-        </Grid.Col>
-        <Grid.Col span={4}>
           <Text>
             Dla właścicieli, którzy marzą o psie, który zachowuje się jak
             wzorowy obywatel - zarówno w domu, jak i na świeżym powietrzu.
           </Text>
-        </Grid.Col>
-        <Grid.Col span={4}>
           <Text>
             Dla tych, którzy chcą zbudować z psem relację pełną zaufania,
             harmonii i... sztuczek, które zachwycą wszystkich!
           </Text>
-        </Grid.Col>
-      </Grid>
+      </SimpleGrid>
     </Box>
   );
 };

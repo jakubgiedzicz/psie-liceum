@@ -51,7 +51,7 @@ function App() {
   return (
     <MantineProvider>
       <AppShell
-        header={{ height: 200 }}
+        header={{ height: 140 }}
         navbar={{
           width: 300,
           breakpoint: "xs",
@@ -61,7 +61,7 @@ function App() {
         <AppShell.Header w={'100dvw'}>
           <Group justify="space-around" h={"100%"}>
             <Link to={"/"}>
-              <Image src={Logo} w={175} />
+              <Image src={Logo} h={120} fit="contain"/>
             </Link>
             <header className={classes.header}>
               <Container size="md">

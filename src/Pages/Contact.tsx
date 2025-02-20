@@ -34,7 +34,7 @@ const Contact = () => {
         >
           Masz pytania, chcesz zapisać swojego psa na zajęcia, a może po prostu chcesz pogadać o psich przygodach?
         </Title>
-        <Text fw={600}>
+        <Text fw={600} mb={32} mt={16}>
         Podaj łapę (i kilka szczegółów), a ja szybko się z Tobą skontaktuję!
         </Text>
         <Group justify="center" my={24} gap={64}>

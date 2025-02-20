@@ -55,7 +55,8 @@ const Psieprzedszkole = () => {
   }, []);
   const theme = useMantineTheme();
   return (
-    <Box className="paws_bg" px={"15%"}>
+    <Box>
+      <Box className="paws_bg" px={"15%"}>
       <Title
         order={1}
         c={theme.colors.yellow[6]}
@@ -155,7 +156,8 @@ const Psieprzedszkole = () => {
       <Accordion px={"15%"} py={32} transitionDuration={200}>
         {items}
       </Accordion>
-      <Title order={2} fw={300} mt={16} bg={theme.colors.yellow[6]}>
+      </Box>
+      <Title order={2} fw={300} mt={16} bg={theme.colors.yellow[6]} px={'15%'}>
         Kursy odbywają się w małych grupach, co zapewnia indywidualne podejście do
         każdego psiaka, a jednocześnie pozwala szczeniakom rozwijać umiejętności
         w towarzystwie rówieśników. Wszystko to w przyjaznej atmosferze, pełnej
