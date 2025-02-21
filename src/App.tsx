@@ -8,7 +8,7 @@ import {
   Image,
   Container,
 } from "@mantine/core";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { useDisclosure, useViewportSize } from "@mantine/hooks";
 import LinkGroup from "./Components/LinkGroup";
 import Logo from "./assets/logo-preview.png";
@@ -26,6 +26,7 @@ function App() {
   const { height, width } = useViewportSize();
   //is width 576<x<992
   const [menu, handlersMenu] = useDisclosure(true)
+  const location = useLocation()
   const links = (mobile: boolean, desktop:boolean) => {
     if (mobile) {
       return <LinkGroup burger={false} openDesktop={desktop}/>;
@@ -33,6 +34,10 @@ function App() {
       return <LinkGroup burger={true} openDesktop={desktop}/>;
     }
   };
+  useEffect(() => {
+    handlersBurger.close()
+    handlersDesktop.open()
+  },[location])
   const handleClick = () => {
     handlersDesktop.toggle()
     handlersBurger.toggle()
@@ -60,13 +65,13 @@ function App() {
       >
         <AppShell.Header w={'100dvw'}>
           <Group justify="space-around" h={"100%"}>
-            <Link to={"/"}>
-              <Image src={Logo} h={120} fit="contain"/>
+            <Link to={"/"} aria-label="Main page">
+              <Image src={Logo} h={120} fit="contain" alt="Logo"/>
             </Link>
             <header className={classes.header}>
               <Container size="md">
                 <div className={classes.inner}>{links(true, menu)}</div>
-                <Burger opened={openedBurger} onClick={() => handleClick()} size="xl" hiddenFrom="md" />
+                <Burger opened={openedBurger} onClick={() => handleClick()} size="xl" hiddenFrom="md" aria-label="Navigation menu button"/>
               </Container>
             </header>
 

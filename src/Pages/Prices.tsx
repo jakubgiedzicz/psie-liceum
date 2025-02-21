@@ -7,9 +7,14 @@ import {
 } from "@mantine/core";
 import text_styles from "../styles/Text.module.css";
 import Price_ListItem from "../Components/Price_ListItem";
+import { useEffect } from "react";
 
 const Prices = () => {
   const theme = useMantineTheme();
+  useEffect(() => {
+      window.scrollTo(0, 0);
+      document.title = "Psie Liceum - Cennik";
+    }, []);
   return (
     <>
       <Stack className="paws_bg" px={'10%'}>

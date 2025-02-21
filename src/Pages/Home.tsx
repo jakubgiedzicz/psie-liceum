@@ -23,7 +23,7 @@ import { useEffect } from "react";
 const Home = () => {
   const theme = useMantineTheme();
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    //window.scrollTo(0, 0);
     document.title = "Psie Liceum";
   }, []);
   return (
@@ -84,7 +84,7 @@ const Home = () => {
         verticalSpacing={{ base: 64 }}
       >
         <Box>
-          <Image src={img_about} radius={"25%"} />
+          <Image src={img_about} radius={"25%"} alt="Image of a cat"/>
         </Box>
         <Stack justify="space-between">
           <Stack>
@@ -118,6 +118,7 @@ const Home = () => {
               to="/o-mnie"
               color={theme.colors.yellow[6]}
               rightSection={<IconArrowRight size={16} />}
+              c='black'
             >
               Więcej o mnie
             </Button>
@@ -244,6 +245,7 @@ const Home = () => {
             to="/kontakt"
             color={theme.colors.yellow[6]}
             rightSection={<IconArrowRight size={16} />}
+            c='black'
           >
             Kontakt
           </Button>
