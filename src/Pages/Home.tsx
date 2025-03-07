@@ -84,7 +84,7 @@ const Home = () => {
         verticalSpacing={{ base: 64 }}
       >
         <Box>
-          <Image src={img_about} radius={"25%"} alt="Image of a cat"/>
+          <Image src={img_about} radius={"25%"} alt="Image of a cat" aria-label="Image of a cat"/>
         </Box>
         <Stack justify="space-between">
           <Stack>

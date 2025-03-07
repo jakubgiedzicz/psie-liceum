@@ -65,8 +65,8 @@ function App() {
       >
         <AppShell.Header w={'100dvw'}>
           <Group justify="space-around" h={"100%"}>
-            <Link to={"/"} aria-label="Main page">
-              <Image src={Logo} h={120} fit="contain" alt="Logo"/>
+            <Link to={"/"} aria-label="Main page" aria-labelledby="Main page link">
+              <Image src={Logo} h={120} fit="contain" alt="Logo" aria-label="Logo Image"/>
             </Link>
             <header className={classes.header}>
               <Container size="md">
