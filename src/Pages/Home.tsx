@@ -13,6 +13,25 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
+import '@mantine/core/styles/BackgroundImage.css';
+import '@mantine/core/styles/UnstyledButton.css';
+import '@mantine/core/styles/Button.css';
+import '@mantine/core/styles/Center.css';
+import '@mantine/core/styles/Container.css';
+import '@mantine/core/styles/Divider.css';
+import '@mantine/core/styles/Image.css';
+import '@mantine/core/styles/List.css';
+import '@mantine/core/styles/SimpleGrid.css';
+import '@mantine/core/styles/Stack.css';
+import '@mantine/core/styles/Text.css';
+import '@mantine/core/styles/Title.css';
+import '@mantine/core/styles/VisuallyHidden.css';
+import '@mantine/core/styles/Paper.css';
+import '@mantine/core/styles/Popover.css';
+import '@mantine/core/styles/CloseButton.css';
+import '@mantine/core/styles/Overlay.css';
+import '@mantine/core/styles/Flex.css';
+import '@mantine/core/styles/FloatingIndicator.css';
 import img_about from "../assets/home-about-me.jpg";
 import styles from "./Home.module.css";
 import text_styles from "../styles/Text.module.css";
@@ -67,6 +86,7 @@ const Home = () => {
                 size="xl"
                 className={text_styles.intro_text + " " + text_styles.paragraph}
                 visibleFrom="sm"
+                c={"white"}
               >
                 Witam Cię serdecznie na mojej stronie. Mam na imię Weronika,
                 jestem psią behawiorystką, czyli specjalistką od zachowania

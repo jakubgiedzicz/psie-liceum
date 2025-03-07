@@ -5,6 +5,10 @@ import {
   NavLink,
   Stack,
 } from "@mantine/core";
+import '@mantine/core/styles/Stack.css'
+import '@mantine/core/styles/Menu.css'
+import '@mantine/core/styles/NavLink.css'
+import '@mantine/core/styles/Stack.css'
 import classes from "./LinkGroup.module.css";
 import { IconChevronDown, IconChevronRight } from "@tabler/icons-react";
 import { ReactElement } from "react";

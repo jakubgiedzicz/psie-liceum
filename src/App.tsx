@@ -1,4 +1,3 @@
-import "@mantine/core/styles.css";
 import "./App.css";
 import {
   AppShell,
@@ -8,11 +7,18 @@ import {
   Image,
   Container,
 } from "@mantine/core";
+import '@mantine/core/styles/UnstyledButton.css';
+import '@mantine/core/styles/Button.css';
+import '@mantine/core/styles/global.css';
+import '@mantine/core/styles/AppShell.css';
+import '@mantine/core/styles/Burger.css';
+import '@mantine/core/styles/Group.css';
+import '@mantine/core/styles/Image.css';
+import '@mantine/core/styles/Container.css';
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useDisclosure, useViewportSize } from "@mantine/hooks";
 import LinkGroup from "./Components/LinkGroup";
 import Logo from "./assets/logo-preview.png";
-import "@mantine/core/styles.css";
 import styles from "./App.module.css";
 import classes from "./Components/LinkGroup.module.css";
 import { useEffect } from "react";

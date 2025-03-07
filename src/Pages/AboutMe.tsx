@@ -9,6 +9,8 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
+import '@mantine/core/styles/ModalBase.css'
+import '@mantine/core/styles/Modal.css';
 import about_me_img from "../assets/about_me_avatar.jpg";
 import text_styles from "../styles/Text.module.css";
 import test from "../assets/certificate-text-samples.jpg";

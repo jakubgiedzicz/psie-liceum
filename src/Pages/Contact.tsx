@@ -11,6 +11,8 @@ import {
   Textarea,
   Button,
 } from "@mantine/core";
+import '@mantine/core/styles/Fieldset.css';
+import '@mantine/core/styles/Input.css';
 import LogoIg from "../assets/Instagram_Glyph_Gradient.svg";
 import LogoFb from "../assets/Facebook_Logo_Primary.png";
 import styles from "../Components/Footer.module.css";
