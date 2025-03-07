@@ -23,7 +23,7 @@ import { useEffect } from "react";
 const Home = () => {
   const theme = useMantineTheme();
   useEffect(() => {
-    //window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     document.title = "Psie Liceum";
   }, []);
   return (

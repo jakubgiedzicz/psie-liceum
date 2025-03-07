@@ -4,7 +4,6 @@ import {
   Text,
   Image,
   List,
-  Grid,
   Box,
   SimpleGrid,
   Center,

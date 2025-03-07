@@ -1,0 +1,9 @@
+.list li:hover {
+  background-color: rgba(22,22,22,0.1);
+  scale: 1.05;
+  transition: 0.2s;
+  user-select: none;
+}
+.list li{
+  padding: 0.5rem 0;
+}

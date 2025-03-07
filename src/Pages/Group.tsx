@@ -7,7 +7,6 @@ import {
   Text,
   Button,
   useMantineTheme,
-  Center,
   Stack,
 } from "@mantine/core";
 import przedszkole from "../assets/beautiful-adorable-little-puppy-cute-600nw-2360693945.webp";
