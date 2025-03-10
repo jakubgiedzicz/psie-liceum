@@ -3,18 +3,13 @@ import {
   Title,
   useMantineTheme,
   Text,
-  List,
   Button,
-  Flex,
   SimpleGrid,
   Card,
-  Group,
   Box,
-  Container,
   Center,
   Divider,
 } from "@mantine/core";
-import text_styles from "../styles/Text.module.css";
 import { useEffect } from "react";
 import styles from "./Diet.module.css";
 import { Link } from "react-router-dom";

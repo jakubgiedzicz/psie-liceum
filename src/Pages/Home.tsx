@@ -3,7 +3,6 @@ import {
   Box,
   Button,
   Center,
-  Container,
   Divider,
   Image,
   List,
