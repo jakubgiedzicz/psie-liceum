@@ -25,6 +25,9 @@
 .text_secondary {
   color: var(--main-secondary-color);
 }
+.intro_img {
+  object-position: 75% 50%;
+}
 @media (min-width: 1921px) {
  .parallax {
   background-position: 50% 300px;

@@ -13,31 +13,33 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
-import '@mantine/core/styles/BackgroundImage.css';
-import '@mantine/core/styles/UnstyledButton.css';
-import '@mantine/core/styles/Button.css';
-import '@mantine/core/styles/Center.css';
-import '@mantine/core/styles/Container.css';
-import '@mantine/core/styles/Divider.css';
-import '@mantine/core/styles/Image.css';
-import '@mantine/core/styles/List.css';
-import '@mantine/core/styles/SimpleGrid.css';
-import '@mantine/core/styles/Stack.css';
-import '@mantine/core/styles/Text.css';
-import '@mantine/core/styles/Title.css';
-import '@mantine/core/styles/VisuallyHidden.css';
-import '@mantine/core/styles/Paper.css';
-import '@mantine/core/styles/Popover.css';
-import '@mantine/core/styles/CloseButton.css';
-import '@mantine/core/styles/Overlay.css';
-import '@mantine/core/styles/Flex.css';
-import '@mantine/core/styles/FloatingIndicator.css';
+import "@mantine/core/styles/BackgroundImage.css";
+import "@mantine/core/styles/UnstyledButton.css";
+import "@mantine/core/styles/Button.css";
+import "@mantine/core/styles/Center.css";
+import "@mantine/core/styles/Container.css";
+import "@mantine/core/styles/Divider.css";
+import "@mantine/core/styles/Image.css";
+import "@mantine/core/styles/List.css";
+import "@mantine/core/styles/SimpleGrid.css";
+import "@mantine/core/styles/Stack.css";
+import "@mantine/core/styles/Text.css";
+import "@mantine/core/styles/Title.css";
+import "@mantine/core/styles/VisuallyHidden.css";
+import "@mantine/core/styles/Paper.css";
+import "@mantine/core/styles/Popover.css";
+import "@mantine/core/styles/CloseButton.css";
+import "@mantine/core/styles/Overlay.css";
+import "@mantine/core/styles/Flex.css";
+import "@mantine/core/styles/FloatingIndicator.css";
 import img_about from "../assets/home-about-me.jpg";
 import styles from "./Home.module.css";
 import text_styles from "../styles/Text.module.css";
 import { Link } from "react-router-dom";
 import { IconArrowRight } from "@tabler/icons-react";
 import { useEffect } from "react";
+import intro from "../assets/czesc.webp";
+import intro2 from "../assets/intro.webp";
 
 const Home = () => {
   const theme = useMantineTheme();
@@ -47,9 +49,11 @@ const Home = () => {
   }, []);
   return (
     <>
-      <Container fluid p={0}>
+      <Image src={intro} h={600} fit="contain" visibleFrom="md" className={styles.intro_img}/>
+      <Image src={intro2} h={600} fit="cover" hiddenFrom="md" className={styles.intro_img}/>
+      {/* <Container fluid p={0}>
         <BackgroundImage
-          src="https://blog.tryfi.com/content/images/2024/03/happy-dog-yellow-flowers.webp"
+          src={intro}
           h={700}
         >
           <Box h={"100%"} bg={"rgba(0, 0, 0, 0.1)"}>
@@ -95,7 +99,7 @@ const Home = () => {
             </Stack>
           </Box>
         </BackgroundImage>
-      </Container>
+      </Container> */}
       <SimpleGrid
         mt={64}
         mx={"10%"}
@@ -104,7 +108,12 @@ const Home = () => {
         verticalSpacing={{ base: 64 }}
       >
         <Box>
-          <Image src={img_about} radius={"25%"} alt="Image of a cat" aria-label="Image of a cat"/>
+          <Image
+            src={img_about}
+            radius={"25%"}
+            alt="Image of a cat"
+            aria-label="Image of a cat"
+          />
         </Box>
         <Stack justify="space-between">
           <Stack>
@@ -138,7 +147,7 @@ const Home = () => {
               to="/o-mnie"
               color={theme.colors.yellow[6]}
               rightSection={<IconArrowRight size={16} />}
-              c='black'
+              c="black"
             >
               Więcej o mnie
             </Button>
@@ -265,7 +274,7 @@ const Home = () => {
             to="/kontakt"
             color={theme.colors.yellow[6]}
             rightSection={<IconArrowRight size={16} />}
-            c='black'
+            c="black"
           >
             Kontakt
           </Button>

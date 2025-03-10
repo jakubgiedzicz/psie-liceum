@@ -1,9 +1,18 @@
-.list li:hover {
-  background-color: rgba(22,22,22,0.1);
+.card:hover {
+  background-color: rgba(250,176,5, 0.2);
   scale: 1.05;
   transition: 0.2s;
   user-select: none;
 }
-.list li{
-  padding: 0.5rem 0;
+.list:hover {
+  background-color: rgba(250,176,5, 0.1);
+  scale: 1.04;
+  transition: 0.15s;
+  user-select: none;
+}
+.card, .list {
+  padding: 8px;
+}
+.grid_item_border {
+  border-radius: 0% 20%;
 }
