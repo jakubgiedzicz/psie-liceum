@@ -17,19 +17,11 @@ import { Link } from "react-router-dom";
 const Diet = () => {
   const theme = useMantineTheme();
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     document.title = "Psie Liceum - Konsultacje dietetyczne";
   }, []);
   return (
     <Stack align="center" mt={32} className="paws_bg" pb={"20vh"}>
-      {/* <Title
-        order={1}
-        c={theme.colors.yellow[6]}
-        className={text_styles.title_shadow}
-      >
-        {" "}
-        Konsultacje dietetyczne
-      </Title> */}
       <Title ta={"left"} w={"100%"} px={"20%"} order={2}>
         Dlaczego dieta i trening to duet idealny?
       </Title>
@@ -146,7 +138,7 @@ const Diet = () => {
         </Box>
         <Divider />
       </Stack>
-      <Button component={Link} to={"/cennik"} size="lg" variant="outline">
+      <Button component={Link} to={"/cennik"} size="lg" c={"black"} color={theme.colors.yellow[6]}>
         Sprawdź ofertę!
       </Button>
     </Stack>

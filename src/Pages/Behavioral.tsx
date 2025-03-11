@@ -12,7 +12,8 @@ import {
   useMantineTheme,
   useMatches,
 } from "@mantine/core";
-import img from "../assets/beautiful-adorable-little-puppy-cute-600nw-2360693945.webp";
+import img from "../assets/behavioral_img_1.webp";
+import img2 from "../assets/behavioral_img_2.webp";
 import styles from "./Behavioral.module.css";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -183,7 +184,7 @@ const Behavioral = () => {
         </Title>
         <SimpleGrid cols={{ base: 1, lg: 2 }} pb={24}>
           <Center visibleFrom="lg">
-            <Image src={img} radius={"10% 10%"} />
+            <Image src={img2} radius={"10% 10%"} />
           </Center>
           <Stack px={32} ta={"left"} justify="center">
             <Text c={theme.colors.gray[8]}>
@@ -213,7 +214,7 @@ const Behavioral = () => {
           </Stack>
         </SimpleGrid>
         <Center my={16}>
-          <Button component={Link} to={"/cennik"} variant="outline" size="md">
+          <Button component={Link} to={"/cennik"} variant="filled" color={theme.colors.yellow[6]} c={"black"} size="md">
             Sprawdź ceny
           </Button>
         </Center>

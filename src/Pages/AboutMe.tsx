@@ -11,7 +11,7 @@ import {
 } from "@mantine/core";
 import '@mantine/core/styles/ModalBase.css'
 import '@mantine/core/styles/Modal.css';
-import about_me_img from "../assets/about_me_avatar.jpg";
+import about_me_img from "../assets/about_me_img.webp";
 import text_styles from "../styles/Text.module.css";
 import test from "../assets/certificate-text-samples.jpg";
 import styles from "../Pages/AboutMe.module.css";
@@ -74,7 +74,7 @@ const AboutMe = () => {
             żywieniowej konsultacji czy w studiu tatuażu.
           </Text>
         </Stack>
-        <Image src={about_me_img} radius={"5%"} h={400} />
+        <Image src={about_me_img} radius={"5%"} h={400} className={styles.about_me_img}/>
       </SimpleGrid>
       <Stack mt={64}>
         <Text ta={"left"} c={theme.colors.gray[8]} px={"15%"}>

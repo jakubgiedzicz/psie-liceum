@@ -1,3 +1,6 @@
 .pointer {
   cursor: pointer;
 }
+.about_me_img {
+  object-position: 50% 20%;
+}

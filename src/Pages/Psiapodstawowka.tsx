@@ -10,7 +10,7 @@ import {
   Stack,
 } from "@mantine/core";
 import text_style from "../styles/Text.module.css";
-import img from "../assets/beautiful-adorable-little-puppy-cute-600nw-2360693945.webp";
+import img from "../assets/hero_2_img.webp";
 import { Link } from "react-router-dom";
 import {
   IconBone,

@@ -64,7 +64,7 @@ function App() {
       <AppShell
         header={{ height: 140 }}
         navbar={{
-          width: 300,
+          width: 250,
           breakpoint: "xs",
           collapsed: { mobile: !openedBurger, desktop: openedDesktop },
         }}

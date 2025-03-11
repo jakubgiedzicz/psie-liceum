@@ -12,7 +12,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.intro_grid {
+  order: -1;
+}
 .end_bg {
   cursor: pointer;
 }

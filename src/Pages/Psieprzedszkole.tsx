@@ -12,7 +12,7 @@ import {
 } from "@mantine/core";
 import text_style from "../styles/Text.module.css";
 import '@mantine/core/styles/Accordion.css';
-import img from "../assets/beautiful-adorable-little-puppy-cute-600nw-2360693945.webp";
+import img from "../assets/behavioral_img_2.webp";
 import {
   IconBone,
   IconCirclesRelation,

@@ -31,14 +31,15 @@ import "@mantine/core/styles/CloseButton.css";
 import "@mantine/core/styles/Overlay.css";
 import "@mantine/core/styles/Flex.css";
 import "@mantine/core/styles/FloatingIndicator.css";
-import img_about from "../assets/home-about-me.jpg";
+import img_about from "../assets/introm_img_2.webp";
+import parallax_img from '../assets/home-about-me.jpg'
 import styles from "./Home.module.css";
 import text_styles from "../styles/Text.module.css";
 import { Link } from "react-router-dom";
 import { IconArrowRight } from "@tabler/icons-react";
 import { useEffect } from "react";
-import intro from "../assets/czesc.webp";
-import intro2 from "../assets/intro.webp";
+import intro from "../assets/hero_1_img.webp";
+import intro2 from "../assets/hero_2_img.webp";
 
 const Home = () => {
   const theme = useMantineTheme();
@@ -49,69 +50,23 @@ const Home = () => {
   return (
     <>
       <Image src={intro} h={600} fit="contain" visibleFrom="md" className={styles.intro_img}/>
-      <Image src={intro2} h={600} fit="cover" hiddenFrom="md" className={styles.intro_img}/>
-      {/* <Container fluid p={0}>
-        <BackgroundImage
-          src={intro}
-          h={700}
-        >
-          <Box h={"100%"} bg={"rgba(0, 0, 0, 0.1)"}>
-            <Stack
-              w={"50%"}
-              pl={48}
-              gap={96}
-              pr={48}
-              h={"100%"}
-              justify="center"
-            >
-              <Title
-                order={2}
-                className={
-                  text_styles.intro_text +
-                  " " +
-                  text_styles.paragraph +
-                  " " +
-                  text_styles.title_shadow
-                }
-              >
-                Weronika Roszkowska
-              </Title>
-              <Title
-                order={1}
-                className={
-                  text_styles.intro_text + " " + text_styles.title_shadow
-                }
-                c={theme.colors.yellow[6]}
-              >
-                Psie Liceum
-              </Title>
-              <Text
-                size="xl"
-                className={text_styles.intro_text + " " + text_styles.paragraph}
-                visibleFrom="sm"
-                c={"white"}
-              >
-                Witam Cię serdecznie na mojej stronie. Mam na imię Weronika,
-                jestem psią behawiorystką, czyli specjalistką od zachowania
-                psów.
-              </Text>
-            </Stack>
-          </Box>
-        </BackgroundImage>
-      </Container> */}
+      <Image src={intro2} h={400} fit="cover" hiddenFrom="md" className={styles.intro_img}/>
+      
       <SimpleGrid
         mt={64}
         mx={"10%"}
         cols={{ base: 1, lg: 2 }}
         spacing={{ base: 64, xl: 96 }}
         verticalSpacing={{ base: 64 }}
+        className={styles.intro_grid}
       >
-        <Box>
+        <Box visibleFrom="md">
           <Image
             src={img_about}
             radius={"25%"}
             alt="Image of a cat"
             aria-label="Image of a cat"
+            mah={500}
           />
         </Box>
         <Stack justify="space-between">
@@ -120,8 +75,17 @@ const Home = () => {
               order={1}
               c={theme.colors.yellow[6]}
               className={text_styles.heading_shadow}
+              visibleFrom="md"
             >
               Czym się zajmuję
+            </Title>
+            <Title
+              order={1}
+              c={theme.colors.yellow[6]}
+              className={text_styles.heading_shadow}
+              hiddenFrom="md"
+            >
+              Psie Liceum
             </Title>
             <Text mt={16} fw={400} size="lg" ta="left">
               Cześć, jestem Weronika - trenerka psów z sercem pełnym pasji i
@@ -152,6 +116,15 @@ const Home = () => {
             </Button>
           </Center>
         </Stack>
+        <Box hiddenFrom="md">
+          <Image
+            src={img_about}
+            radius={"25%"}
+            alt="Image of a cat"
+            aria-label="Image of a cat"
+            mah={500}
+          />
+        </Box>
       </SimpleGrid>
       <Divider mt={64} size={"sm"} />
       <Stack mt={64}>
@@ -263,7 +236,7 @@ const Home = () => {
           </Stack>
         </SimpleGrid>
       </Stack>
-      <BackgroundImage src={img_about} className={styles.parallax} h={400}>
+      <BackgroundImage src={parallax_img} className={styles.parallax} h={400}>
         <Stack justify="space-around">
           <Box />
           <Button
