@@ -38,11 +38,9 @@ import text_styles from "../styles/Text.module.css";
 import { Link } from "react-router-dom";
 import { IconArrowRight } from "@tabler/icons-react";
 import { useEffect } from "react";
-import { useViewportSize } from "@mantine/hooks";
 
 const Home = () => {
   const theme = useMantineTheme();
-  const { width } = useViewportSize();
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Psie Liceum";
@@ -53,21 +51,17 @@ const Home = () => {
         <source
           media="(min-width: 992px)"
           type="image/webp"
-          srcSet="/psie-liceum/assets/hero_1_img.webp"
+          srcSet="/psie-liceum/src/assets/hero_1_img.webp"
         />
         <source
           media="(max-width: 991px)"
           type="image/webp"
-          srcSet="/psie-liceum/assets/hero_2_img.webp"
+          srcSet="/psie-liceum/src/assets/hero_2_img.webp"
         />
         <Image
-          h={width < 992 ? 400 : 600}
-          src={
-            width < 992
-              ? "/psie-liceum/assets/hero_2_img.webp"
-              : "/psie-liceum/assets/hero_1_img.webp"
-          }
-          fit={width < 992 ? "cover" : "contain"}
+          h={600}
+          src={"/psie-liceum/src/assets/hero_1_img.webp"}
+          fit={"contain"}
         />
       </picture>
       <SimpleGrid
