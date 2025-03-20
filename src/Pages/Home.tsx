@@ -32,26 +32,42 @@ import "@mantine/core/styles/Overlay.css";
 import "@mantine/core/styles/Flex.css";
 import "@mantine/core/styles/FloatingIndicator.css";
 import img_about from "../assets/introm_img_2.webp";
-import parallax_img from '../assets/home-about-me.jpg'
+import parallax_img from "../assets/home-about-me.jpg";
 import styles from "./Home.module.css";
 import text_styles from "../styles/Text.module.css";
 import { Link } from "react-router-dom";
 import { IconArrowRight } from "@tabler/icons-react";
 import { useEffect } from "react";
-import intro from "../assets/hero_1_img.webp";
-import intro2 from "../assets/hero_2_img.webp";
+import { useViewportSize } from "@mantine/hooks";
 
 const Home = () => {
   const theme = useMantineTheme();
+  const { height, width } = useViewportSize();
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Psie Liceum";
   }, []);
   return (
     <>
-      <Image src={intro} h={600} fit="contain" visibleFrom="md" className={styles.intro_img}/>
-      <Image src={intro2} h={400} fit="cover" hiddenFrom="md" className={styles.intro_img}/>
-      
+      <picture>
+        <source
+          media="(min-width: 992px)"
+          srcSet="/psie-liceum/src/assets/hero_1_img.webp"
+        />
+        <source
+          media="(max-width: 991px)"
+          srcSet="/psie-liceum/src/assets/hero_2_img.webp"
+        />
+        <Image
+          h={width < 992 ? 400 : 600}
+          src={
+            width < 992
+              ? "/psie-liceum/src/assets/hero_2_img.webp"
+              : "/psie-liceum/src/assets/hero_1_img.webp"
+          }
+          fit={width < 992 ? "cover" : "contain"}
+        />
+      </picture>
       <SimpleGrid
         mt={64}
         mx={"10%"}

@@ -60,7 +60,7 @@ function App() {
     }
   }, [width])
   return (
-    <MantineProvider>
+    <MantineProvider forceColorScheme="light">
       <AppShell
         header={{ height: 140 }}
         navbar={{
