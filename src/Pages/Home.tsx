@@ -51,16 +51,16 @@ const Home = () => {
         <source
           media="(min-width: 992px)"
           type="image/webp"
-          srcSet="/psie-liceum/src/assets/hero_1_img.webp"
+          srcSet="/psie-liceum/assets/hero_1_img.webp"
         />
         <source
           media="(max-width: 991px)"
           type="image/webp"
-          srcSet="/psie-liceum/src/assets/hero_2_img.webp"
+          srcSet="/psie-liceum/assets/hero_2_img.webp"
         />
         <Image
           h={600}
-          src={"/psie-liceum/src/assets/hero_1_img.webp"}
+          src={"/psie-liceum/assets/hero_1_img.webp"}
           fit={"contain"}
         />
       </picture>
