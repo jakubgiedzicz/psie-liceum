@@ -52,29 +52,22 @@ const Home = () => {
       <picture>
         <source
           media="(min-width: 992px)"
-          srcSet="/psie-liceum/assets/hero_1_img.webp"
+          srcSet="/assets/hero_1_img.webp"
         />
         <source
           media="(max-width: 991px)"
-          srcSet="/psie-liceum/assets/hero_2_img.webp"
+          srcSet="/assets/hero_2_img.webp"
         />
         <Image
           h={width < 992 ? 400 : 600}
           src={
             width < 992
-              ? "/psie-liceum/assets/hero_2_img.webp"
-              : "/psie-liceum/assets/hero_1_img.webp"
+              ? "/assets/hero_2_img.webp"
+              : "/assets/hero_1_img.webp"
           }
           fit={width < 992 ? "cover" : "contain"}
         />
       </picture>
-      {/* <Image h={width < 992 ? 400 : 600}
-          src={
-            width < 992
-              ? "/psie-liceum/src/assets/hero_2_img.webp"
-              : "/psie-liceum/src/assets/hero_1_img.webp"
-          }
-          fit={width < 992 ? "cover" : "contain"}/> */}
       <SimpleGrid
         mt={64}
         mx={"10%"}
