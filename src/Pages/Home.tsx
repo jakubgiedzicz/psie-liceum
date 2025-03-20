@@ -38,6 +38,8 @@ import text_styles from "../styles/Text.module.css";
 import { Link } from "react-router-dom";
 import { IconArrowRight } from "@tabler/icons-react";
 import { useEffect } from "react";
+import intro from "../assets/hero_1_img.webp";
+import intro2 from "../assets/hero_2_img.webp";
 
 const Home = () => {
   const theme = useMantineTheme();
@@ -47,23 +49,8 @@ const Home = () => {
   }, []);
   return (
     <>
-      <picture>
-        <source
-          media="(min-width: 992px)"
-          type="image/webp"
-          srcSet={"psie-liceum/assets/hero_1_img.webp"}
-        />
-        <source
-          media="(max-width: 991px)"
-          type="image/webp"
-          srcSet={"psie-liceum/assets/hero_2_img.webp"}
-        />
-        <Image
-          h={600}
-          src={"psie-liceum/assets/hero_1_img.webp"}
-          fit={"contain"}
-        />
-      </picture>
+       <Image src={intro} h={600} fit="contain" visibleFrom="md" className={styles.intro_img}/>
+       <Image src={intro2} h={400} fit="cover" hiddenFrom="md" className={styles.intro_img}/>
       <SimpleGrid
         mt={64}
         mx={"10%"}

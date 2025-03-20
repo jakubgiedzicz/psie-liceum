@@ -1,4 +1,4 @@
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "../Pages/Home";
 import AboutMe from "../Pages/AboutMe";
@@ -11,7 +11,7 @@ import Psiapodstawowka from "../Pages/Psiapodstawowka";
 import Group from "../Pages/Group";
 import Consult from "../Pages/Consult";
 
-export const Router = createHashRouter([
+export const Router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
@@ -28,4 +28,4 @@ export const Router = createHashRouter([
       { path: 'kontakt', element: <Contact />},
     ]
   }
-])
+], { basename: '/'} )
