@@ -42,7 +42,7 @@ import { useViewportSize } from "@mantine/hooks";
 
 const Home = () => {
   const theme = useMantineTheme();
-  const { height, width } = useViewportSize();
+  const { width } = useViewportSize();
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Psie Liceum";
@@ -68,6 +68,13 @@ const Home = () => {
           fit={width < 992 ? "cover" : "contain"}
         />
       </picture>
+      {/* <Image h={width < 992 ? 400 : 600}
+          src={
+            width < 992
+              ? "/psie-liceum/src/assets/hero_2_img.webp"
+              : "/psie-liceum/src/assets/hero_1_img.webp"
+          }
+          fit={width < 992 ? "cover" : "contain"}/> */}
       <SimpleGrid
         mt={64}
         mx={"10%"}
