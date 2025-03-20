@@ -28,4 +28,4 @@ export const Router = createBrowserRouter([
       { path: 'kontakt', element: <Contact />},
     ]
   }
-], { basename: '/'} )
+], { basename: '/psie-liceum'} )
