@@ -51,12 +51,12 @@ const Home = () => {
         <source
           media="(min-width: 992px)"
           type="image/webp"
-          srcSet="/psie-liceum/assets/hero_1_img.webp"
+          srcSet={"/psie-liceum/assets/hero_1_img.webp"}
         />
         <source
           media="(max-width: 991px)"
           type="image/webp"
-          srcSet="/psie-liceum/assets/hero_2_img.webp"
+          srcSet={"/psie-liceum/assets/hero_2_img.webp"}
         />
         <Image
           h={600}
